@@ -7,8 +7,6 @@ on:
 permissions:
   contents: write
 jobs:
-  permissions:
-    contents: write
   build:
     runs-on: ubuntu-latest
     container: ubuntu:20.04
