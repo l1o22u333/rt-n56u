@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     container: ubuntu:18.04
     steps:
+    - name: Prepare container
+      run: |
+        apt-get update
+        apt-get -y install sudo git
     - name: Checkout
       uses: actions/checkout@master
     - name: Initialization environment
