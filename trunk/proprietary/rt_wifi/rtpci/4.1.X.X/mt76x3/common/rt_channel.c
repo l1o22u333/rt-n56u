@@ -1997,7 +1997,7 @@ COUNTRY_PROP CountryProp[]=
 };
 
 #ifndef EXT_BUILD_CHANNEL_LIST
-static PCOUNTRY_PROP GetCountryProp(
+PCOUNTRY_PROP GetCountryProp(
 	IN PUCHAR CntryCode)
 {
 	INT loop = 0;
@@ -2230,7 +2230,13 @@ UINT8 GetCuntryMaxTxPwr(
 	IN PRTMP_ADAPTER pAd,
 	IN UINT8 channel)
 {
-	return DEFAULT_MAX_TX_POWER;
+	int i;
+	for (i = 0; i < pAd->ChannelListNum; i++)
+	{
+		if (pAd->ChannelList[i].Channel == channel)
+			break;
+	}
+	return pAd->ChannelList[i].MaxTxPwr;
 }
 
 
