@@ -1996,7 +1996,7 @@ COUNTRY_PROP CountryProp[]=
 	{""  , 0, FALSE}	     , /* End */	
 };
 
-#ifdef FALSE
+#if FALSE
 static PCOUNTRY_PROP GetCountryProp(
 	IN PUCHAR CntryCode)
 {
