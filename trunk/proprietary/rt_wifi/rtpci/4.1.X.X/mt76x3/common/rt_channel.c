@@ -1996,7 +1996,7 @@ COUNTRY_PROP CountryProp[]=
 	{""  , 0, FALSE}	     , /* End */	
 };
 
-#if FALSE
+#ifndef EXT_BUILD_CHANNEL_LIST
 static PCOUNTRY_PROP GetCountryProp(
 	IN PUCHAR CntryCode)
 {
@@ -2230,52 +2230,7 @@ UINT8 GetCuntryMaxTxPwr(
 	IN PRTMP_ADAPTER pAd,
 	IN UINT8 channel)
 {
-	int i;
-	for (i = 0; i < pAd->ChannelListNum; i++)
-	{
-		if (pAd->ChannelList[i].Channel == channel)
-			break;
-	}
-
-	if (i == pAd->ChannelListNum)
-		return DEFAULT_MAX_TX_POWER;
-#ifdef FALSE
-	if (pAd->CommonCfg.bSKUMode == TRUE)
-	{
-		UINT deltaTxStreamPwr = 0;
-
-#ifdef FALSE
-		if (WMODE_CAP_N(pAd->CommonCfg.PhyMode) && (pAd->CommonCfg.TxStream == 2))
-			deltaTxStreamPwr = 3; /* If 2Tx case, antenna gain will increase 3dBm*/
-#endif /* DOT11_N_SUPPORT */
-
-		if (pAd->ChannelList[i].RegulatoryDomain == FCC)
-		{
-			/* FCC should maintain 20/40 Bandwidth, and without antenna gain */
-#ifdef FALSE
-			if (WMODE_CAP_N(pAd->CommonCfg.PhyMode) &&
-				(pAd->CommonCfg.RegTransmitSetting.field.BW == BW_40) &&
-				(channel == 1 || channel == 11))
-				return (pAd->ChannelList[i].MaxTxPwr - pAd->CommonCfg.BandedgeDelta - deltaTxStreamPwr);
-			else
-#endif /* DOT11_N_SUPPORT */
-				return (pAd->ChannelList[i].MaxTxPwr - deltaTxStreamPwr);
-		}
-		else if (pAd->ChannelList[i].RegulatoryDomain == CE)
-		{
-			return (pAd->ChannelList[i].MaxTxPwr - pAd->CommonCfg.AntGain - deltaTxStreamPwr);
-		}
-		else
-			return DEFAULT_MAX_TX_POWER;
-	}
-	else
-#endif /* SINGLE_SKU */
-	{
-		if (pAd->ChannelList[i].MaxTxPwr >= 14)
-			return pAd->ChannelList[i].MaxTxPwr;
-		else
-			return DEFAULT_MAX_TX_POWER;
-	}
+	return DEFAULT_MAX_TX_POWER;
 }
 
 
