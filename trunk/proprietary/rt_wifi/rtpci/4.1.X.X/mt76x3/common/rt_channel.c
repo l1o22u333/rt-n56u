@@ -2411,7 +2411,7 @@ UINT8 GetCuntryMaxTxPwr(
 
 #ifdef DOT11_N_SUPPORT
 		if (WMODE_CAP_N(pAd->CommonCfg.PhyMode) && (pAd->CommonCfg.TxStream == 2))
-			deltaTxStreamPwr = 3; /* If 2Tx case, antenna gain will increase 3dBm*/
+			deltaTxStreamPwr = 0; /* If 2Tx case, antenna gain will increase 3dBm*/
 #endif /* DOT11_N_SUPPORT */
 
 		if (pAd->ChannelList[i].RegulatoryDomain == FCC)
@@ -2421,14 +2421,14 @@ UINT8 GetCuntryMaxTxPwr(
 			if (WMODE_CAP_N(pAd->CommonCfg.PhyMode) &&
 				(pAd->CommonCfg.RegTransmitSetting.field.BW == BW_40) &&
 				(channel == 1 || channel == 11))
-				return (pAd->ChannelList[i].MaxTxPwr - pAd->CommonCfg.BandedgeDelta - deltaTxStreamPwr);
+				return (pAd->ChannelList[i].MaxTxPwr/* - pAd->CommonCfg.BandedgeDelta - deltaTxStreamPwr*/);
 			else
 #endif /* DOT11_N_SUPPORT */
-				return (pAd->ChannelList[i].MaxTxPwr - deltaTxStreamPwr);
+				return (pAd->ChannelList[i].MaxTxPwr/* - deltaTxStreamPwr*/);
 		}
 		else if (pAd->ChannelList[i].RegulatoryDomain == CE)
 		{
-			return (pAd->ChannelList[i].MaxTxPwr - pAd->CommonCfg.AntGain - deltaTxStreamPwr);
+			return (pAd->ChannelList[i].MaxTxPwr/* - pAd->CommonCfg.AntGain - deltaTxStreamPwr*/);
 		}
 		else
 			return 0xff;
