@@ -1707,124 +1707,124 @@ CH_DESP Country_WO_ChDesp[] =
 
 CH_REGION ChRegion[] =
 {
-	{"AL", CE, Country_AL_ChDesp, TRUE}, /* Albania */
-	{"DZ", CE, Country_DZ_ChDesp, TRUE}, /* Algeria */
-	{"AR", CE, Country_AR_ChDesp, TRUE}, /* Argentina */
-	{"AM", CE, Country_AM_ChDesp, TRUE}, /* Armenia */
-	{"AW", CE, Country_AW_ChDesp, TRUE}, /* Aruba */
+	{"AL", CE, Country_AL_ChDesp, FALSE}, /* Albania */
+	{"DZ", CE, Country_DZ_ChDesp, FALSE}, /* Algeria */
+	{"AR", CE, Country_AR_ChDesp, FALSE}, /* Argentina */
+	{"AM", CE, Country_AM_ChDesp, FALSE}, /* Armenia */
+	{"AW", CE, Country_AW_ChDesp, FALSE}, /* Aruba */
 	{"AU", CE, Country_AU_ChDesp, FALSE}, /* Australia */
-	{"AT", CE, Country_AT_ChDesp, TRUE}, /* Austria */
-	{"AZ", CE, Country_AZ_ChDesp, TRUE}, /* Azerbaijan */
-	{"BH", CE, Country_BH_ChDesp, TRUE}, /* Bahrain */
-	{"BD", CE, Country_BD_ChDesp, TRUE}, /* Bangladesh */
-	{"BB", CE, Country_BB_ChDesp, TRUE}, /* Barbados */
-	{"BY", CE, Country_BY_ChDesp, TRUE}, /* Belarus */
-	{"BE", CE, Country_BE_ChDesp, TRUE}, /* Belgium */
-	{"BZ", CE, Country_BZ_ChDesp, TRUE}, /* Belize */
-	{"BO", CE, Country_BO_ChDesp, TRUE}, /* Bolivia */
-	{"BA", CE, Country_BA_ChDesp, TRUE}, /* Bosnia and Herzegovina */
+	{"AT", CE, Country_AT_ChDesp, FALSE}, /* Austria */
+	{"AZ", CE, Country_AZ_ChDesp, FALSE}, /* Azerbaijan */
+	{"BH", CE, Country_BH_ChDesp, FALSE}, /* Bahrain */
+	{"BD", CE, Country_BD_ChDesp, FALSE}, /* Bangladesh */
+	{"BB", CE, Country_BB_ChDesp, FALSE}, /* Barbados */
+	{"BY", CE, Country_BY_ChDesp, FALSE}, /* Belarus */
+	{"BE", CE, Country_BE_ChDesp, FALSE}, /* Belgium */
+	{"BZ", CE, Country_BZ_ChDesp, FALSE}, /* Belize */
+	{"BO", CE, Country_BO_ChDesp, FALSE}, /* Bolivia */
+	{"BA", CE, Country_BA_ChDesp, FALSE}, /* Bosnia and Herzegovina */
 	{"BR", CE, Country_BR_ChDesp, FALSE}, /* Brazil */
-	{"BN", CE, Country_BN_ChDesp, TRUE}, /* Brunei Darussalam */
-	{"BG", CE, Country_BG_ChDesp, TRUE}, /* Bulgaria */
-	{"KH", CE, Country_KH_ChDesp, TRUE}, /* Cambodia */
+	{"BN", CE, Country_BN_ChDesp, FALSE}, /* Brunei Darussalam */
+	{"BG", CE, Country_BG_ChDesp, FALSE}, /* Bulgaria */
+	{"KH", CE, Country_KH_ChDesp, FALSE}, /* Cambodia */
 	{"CA", FCC,Country_CA_ChDesp, FALSE}, /* Canada */
-	{"CL", CE, Country_CL_ChDesp, TRUE}, /* Chile */
+	{"CL", CE, Country_CL_ChDesp, FALSE}, /* Chile */
 	{"CN", CHN, Country_CN_ChDesp, FALSE}, /* China */
-	{"CO", CE, Country_CO_ChDesp, TRUE}, /* Colombia */
-	{"CR", CE, Country_CR_ChDesp, TRUE}, /* Costa Rica */
-	{"HR", CE, Country_HR_ChDesp, TRUE}, /* Croatia */
-	{"CY", CE, Country_CY_ChDesp, TRUE}, /* Cyprus */
-	{"CZ", CE, Country_CZ_ChDesp, TRUE}, /* Czech Republic */
-	{"DK", CE, Country_DK_ChDesp, TRUE}, /* Denmark */
-	{"DO", CE, Country_DO_ChDesp, TRUE}, /* Dominican Republic */
-	{"EC", CE, Country_EC_ChDesp, TRUE}, /* Ecuador */
-	{"EG", CE, Country_EG_ChDesp, TRUE}, /* Egypt */
-	{"SV", CE, Country_SV_ChDesp, TRUE}, /* El Salvador */
-	{"EE", CE, Country_EE_ChDesp, TRUE}, /* Estonia */
-	{"FI", CE, Country_FI_ChDesp, TRUE}, /* Finland */
-	{"FR", CE, Country_FR_ChDesp, TRUE}, /* France */
-	{"GE", CE, Country_GE_ChDesp, TRUE}, /* Georgia */
-	{"DE", CE, Country_DE_ChDesp, TRUE}, /* Germany */
-	{"GR", CE, Country_GR_ChDesp, TRUE}, /* Greece */
-	{"GL", CE, Country_GL_ChDesp, TRUE}, /* Greenland */
-	{"GD", CE, Country_GD_ChDesp, TRUE}, /* Grenada */
-	{"GU", CE, Country_GU_ChDesp, TRUE}, /* Guam */
-	{"GT", CE, Country_GT_ChDesp, TRUE}, /* Guatemala */
-	{"HT", CE, Country_HT_ChDesp, TRUE}, /* Haiti */
-	{"HN", CE, Country_HN_ChDesp, TRUE}, /* Honduras */
-	{"HK", CE, Country_HK_ChDesp, TRUE}, /* Hong Kong */
-	{"HU", CE, Country_HU_ChDesp, TRUE}, /* Hungary */
-	{"IS", CE, Country_IS_ChDesp, TRUE}, /* Iceland */
-	{"IN", CE, Country_IN_ChDesp, TRUE}, /* India */
-	{"ID", CE, Country_ID_ChDesp, TRUE}, /* Indonesia */
-	{"IR", CE, Country_IR_ChDesp, TRUE}, /* Iran, Islamic Republic of */
-	{"IE", CE, Country_IE_ChDesp, TRUE}, /* Ireland */
+	{"CO", CE, Country_CO_ChDesp, FALSE}, /* Colombia */
+	{"CR", CE, Country_CR_ChDesp, FALSE}, /* Costa Rica */
+	{"HR", CE, Country_HR_ChDesp, FALSE}, /* Croatia */
+	{"CY", CE, Country_CY_ChDesp, FALSE}, /* Cyprus */
+	{"CZ", CE, Country_CZ_ChDesp, FALSE}, /* Czech Republic */
+	{"DK", CE, Country_DK_ChDesp, FALSE}, /* Denmark */
+	{"DO", CE, Country_DO_ChDesp, FALSE}, /* Dominican Republic */
+	{"EC", CE, Country_EC_ChDesp, FALSE}, /* Ecuador */
+	{"EG", CE, Country_EG_ChDesp, FALSE}, /* Egypt */
+	{"SV", CE, Country_SV_ChDesp, FALSE}, /* El Salvador */
+	{"EE", CE, Country_EE_ChDesp, FALSE}, /* Estonia */
+	{"FI", CE, Country_FI_ChDesp, FALSE}, /* Finland */
+	{"FR", CE, Country_FR_ChDesp, FALSE}, /* France */
+	{"GE", CE, Country_GE_ChDesp, FALSE}, /* Georgia */
+	{"DE", CE, Country_DE_ChDesp, FALSE}, /* Germany */
+	{"GR", CE, Country_GR_ChDesp, FALSE}, /* Greece */
+	{"GL", CE, Country_GL_ChDesp, FALSE}, /* Greenland */
+	{"GD", CE, Country_GD_ChDesp, FALSE}, /* Grenada */
+	{"GU", CE, Country_GU_ChDesp, FALSE}, /* Guam */
+	{"GT", CE, Country_GT_ChDesp, FALSE}, /* Guatemala */
+	{"HT", CE, Country_HT_ChDesp, FALSE}, /* Haiti */
+	{"HN", CE, Country_HN_ChDesp, FALSE}, /* Honduras */
+	{"HK", CE, Country_HK_ChDesp, FALSE}, /* Hong Kong */
+	{"HU", CE, Country_HU_ChDesp, FALSE}, /* Hungary */
+	{"IS", CE, Country_IS_ChDesp, FALSE}, /* Iceland */
+	{"IN", CE, Country_IN_ChDesp, FALSE}, /* India */
+	{"ID", CE, Country_ID_ChDesp, FALSE}, /* Indonesia */
+	{"IR", CE, Country_IR_ChDesp, FALSE}, /* Iran, Islamic Republic of */
+	{"IE", CE, Country_IE_ChDesp, FALSE}, /* Ireland */
 	{"IL", CE, Country_IL_ChDesp, FALSE}, /* Israel */
-	{"IT", CE, Country_IT_ChDesp, TRUE}, /* Italy */
-	{"JM", CE, Country_JM_ChDesp, TRUE}, /* Jamaica */
+	{"IT", CE, Country_IT_ChDesp, FALSE}, /* Italy */
+	{"JM", CE, Country_JM_ChDesp, FALSE}, /* Jamaica */
 	{"JP", JAP,Country_JP_ChDesp, FALSE}, /* Japan */		
-	{"JO", CE, Country_JO_ChDesp, TRUE}, /* Jordan */	
-	{"KZ", CE, Country_KZ_ChDesp, TRUE}, /* Kazakhstan */			
-	{"KE", CE, Country_KE_ChDesp, TRUE}, /* Kenya */	
-	{"KP", CE, Country_KP_ChDesp, TRUE}, /* Korea, Democratic People's Republic of */
+	{"JO", CE, Country_JO_ChDesp, FALSE}, /* Jordan */	
+	{"KZ", CE, Country_KZ_ChDesp, FALSE}, /* Kazakhstan */			
+	{"KE", CE, Country_KE_ChDesp, FALSE}, /* Kenya */	
+	{"KP", CE, Country_KP_ChDesp, FALSE}, /* Korea, Democratic People's Republic of */
 	{"KR", CE, Country_KR_ChDesp, FALSE}, /* Korea, Republic of */			
-	{"KW", CE, Country_KW_ChDesp, TRUE}, /* Kuwait */			
-	{"LV", CE, Country_LV_ChDesp, TRUE}, /* Latvia */			
-	{"LB", CE, Country_LB_ChDesp, TRUE}, /* Lebanon */			
-	{"LI", CE, Country_LI_ChDesp, TRUE}, /* Liechtenstein */			
-	{"LT", CE, Country_LT_ChDesp, TRUE}, /* Lithuania */			
-	{"LU", CE, Country_LU_ChDesp, TRUE}, /* Luxembourg */			
-	{"MO", CE, Country_MO_ChDesp, TRUE}, /* Macao */			
-	{"MK", CE, Country_MK_ChDesp, TRUE}, /* Macedonia, Republic of */			
-	{"MY", CE, Country_MY_ChDesp, TRUE}, /* Malaysia */			
-	{"MT", CE, Country_MT_ChDesp, TRUE}, /* Malta */			
+	{"KW", CE, Country_KW_ChDesp, FALSE}, /* Kuwait */			
+	{"LV", CE, Country_LV_ChDesp, FALSE}, /* Latvia */			
+	{"LB", CE, Country_LB_ChDesp, FALSE}, /* Lebanon */			
+	{"LI", CE, Country_LI_ChDesp, FALSE}, /* Liechtenstein */			
+	{"LT", CE, Country_LT_ChDesp, FALSE}, /* Lithuania */			
+	{"LU", CE, Country_LU_ChDesp, FALSE}, /* Luxembourg */			
+	{"MO", CE, Country_MO_ChDesp, FALSE}, /* Macao */			
+	{"MK", CE, Country_MK_ChDesp, FALSE}, /* Macedonia, Republic of */			
+	{"MY", CE, Country_MY_ChDesp, FALSE}, /* Malaysia */			
+	{"MT", CE, Country_MT_ChDesp, FALSE}, /* Malta */			
 	{"MX", CE, Country_MX_ChDesp, FALSE}, /* Mexico */			
-	{"MC", CE, Country_MC_ChDesp, TRUE}, /* Monaco */			
-	{"MA", CE, Country_MA_ChDesp, TRUE}, /* Morocco */			
-	{"NP", CE, Country_NP_ChDesp, TRUE}, /* Nepal */			
-	{"NL", CE, Country_NL_ChDesp, TRUE}, /* Netherlands */			
-	{"AN", CE, Country_AN_ChDesp, TRUE}, /* Netherlands Antilles */			
-	{"NZ", CE, Country_NZ_ChDesp, TRUE}, /* New Zealand */			
-	{"NO", CE, Country_NO_ChDesp, TRUE}, /* Norway */			
-	{"OM", CE, Country_OM_ChDesp, TRUE}, /* Oman */		
-	{"PK", CE, Country_PK_ChDesp, TRUE}, /* Pakistan */		
-	{"PA", CE, Country_PA_ChDesp, TRUE}, /* Panama */	
-	{"PG", CE, Country_PG_ChDesp, TRUE}, /* Papua New Guinea */	
-	{"PE", CE, Country_PE_ChDesp, TRUE}, /* Peru */			
-	{"PH", CE, Country_PH_ChDesp, TRUE}, /* Philippines */		
-	{"PL", CE, Country_PL_ChDesp, TRUE}, /* Poland */			
-	{"PT", CE, Country_PT_ChDesp, TRUE}, /* Portuga l*/			
-	{"PR", CE, Country_PR_ChDesp, TRUE}, /* Puerto Rico */			
-	{"QA", CE, Country_QA_ChDesp, TRUE}, /* Qatar */			
-	{"RO", CE, Country_RO_ChDesp, TRUE}, /* Romania */			
+	{"MC", CE, Country_MC_ChDesp, FALSE}, /* Monaco */			
+	{"MA", CE, Country_MA_ChDesp, FALSE}, /* Morocco */			
+	{"NP", CE, Country_NP_ChDesp, FALSE}, /* Nepal */			
+	{"NL", CE, Country_NL_ChDesp, FALSE}, /* Netherlands */			
+	{"AN", CE, Country_AN_ChDesp, FALSE}, /* Netherlands Antilles */			
+	{"NZ", CE, Country_NZ_ChDesp, FALSE}, /* New Zealand */			
+	{"NO", CE, Country_NO_ChDesp, FALSE}, /* Norway */			
+	{"OM", CE, Country_OM_ChDesp, FALSE}, /* Oman */		
+	{"PK", CE, Country_PK_ChDesp, FALSE}, /* Pakistan */		
+	{"PA", CE, Country_PA_ChDesp, FALSE}, /* Panama */	
+	{"PG", CE, Country_PG_ChDesp, FALSE}, /* Papua New Guinea */	
+	{"PE", CE, Country_PE_ChDesp, FALSE}, /* Peru */			
+	{"PH", CE, Country_PH_ChDesp, FALSE}, /* Philippines */		
+	{"PL", CE, Country_PL_ChDesp, FALSE}, /* Poland */			
+	{"PT", CE, Country_PT_ChDesp, FALSE}, /* Portuga l*/			
+	{"PR", CE, Country_PR_ChDesp, FALSE}, /* Puerto Rico */			
+	{"QA", CE, Country_QA_ChDesp, FALSE}, /* Qatar */			
+	{"RO", CE, Country_RO_ChDesp, FALSE}, /* Romania */			
 	{"RU", CE, Country_RU_ChDesp, FALSE}, /* Russian Federation */			
-	{"BL", CE, Country_BL_ChDesp, TRUE}, /* Saint Barth'elemy */			
-	{"SA", CE, Country_SA_ChDesp, TRUE}, /* Saudi Arabia */			
-	{"SG", CE, Country_SG_ChDesp, TRUE}, /* Singapore */			
-	{"SK", CE, Country_SK_ChDesp, TRUE}, /* Slovakia */			
-	{"SI", CE, Country_SI_ChDesp, TRUE}, /* Slovenia */					
+	{"BL", CE, Country_BL_ChDesp, FALSE}, /* Saint Barth'elemy */			
+	{"SA", CE, Country_SA_ChDesp, FALSE}, /* Saudi Arabia */			
+	{"SG", CE, Country_SG_ChDesp, FALSE}, /* Singapore */			
+	{"SK", CE, Country_SK_ChDesp, FALSE}, /* Slovakia */			
+	{"SI", CE, Country_SI_ChDesp, FALSE}, /* Slovenia */					
 	{"ZA", CE, Country_ZA_ChDesp, FALSE}, /* South Africa */					
-	{"ES", CE, Country_ES_ChDesp, TRUE}, /* Spain */				
-	{"LK", CE, Country_LK_ChDesp, TRUE}, /* Sri Lanka */				
-	{"SE", CE, Country_SE_ChDesp, TRUE}, /* Sweden */					
-	{"CH", CE, Country_CH_ChDesp, TRUE}, /* Switzerland */					
-	{"SY", CE, Country_SY_ChDesp, TRUE}, /* Syrian Arab Republic */					
+	{"ES", CE, Country_ES_ChDesp, FALSE}, /* Spain */				
+	{"LK", CE, Country_LK_ChDesp, FALSE}, /* Sri Lanka */				
+	{"SE", CE, Country_SE_ChDesp, FALSE}, /* Sweden */					
+	{"CH", CE, Country_CH_ChDesp, FALSE}, /* Switzerland */					
+	{"SY", CE, Country_SY_ChDesp, FALSE}, /* Syrian Arab Republic */					
 	{"TW", FCC,Country_TW_ChDesp, FALSE}, /* Taiwan */			
 	{"TH", CE, Country_TH_ChDesp, FALSE}, /* Thailand */					
-	{"TT", CE, Country_TT_ChDesp, TRUE}, /* Trinidad and Tobago */			
-	{"TN", CE, Country_TN_ChDesp, TRUE}, /* Tunisia */				
-	{"TR", CE, Country_TR_ChDesp, TRUE}, /* Turkey */					
-	{"UA", CE, Country_UA_ChDesp, TRUE}, /* Ukraine */					
-	{"AE", CE, Country_AE_ChDesp, TRUE}, /* United Arab Emirates */					
-	{"GB", CE, Country_GB_ChDesp, TRUE}, /* United Kingdom */			
+	{"TT", CE, Country_TT_ChDesp, FALSE}, /* Trinidad and Tobago */			
+	{"TN", CE, Country_TN_ChDesp, FALSE}, /* Tunisia */				
+	{"TR", CE, Country_TR_ChDesp, FALSE}, /* Turkey */					
+	{"UA", CE, Country_UA_ChDesp, FALSE}, /* Ukraine */					
+	{"AE", CE, Country_AE_ChDesp, FALSE}, /* United Arab Emirates */					
+	{"GB", CE, Country_GB_ChDesp, FALSE}, /* United Kingdom */			
 	{"US", FCC,Country_US_ChDesp, FALSE}, /* United States */			
-	{"UY", CE, Country_UY_ChDesp, TRUE}, /* Uruguay */					
-	{"UZ", CE, Country_UZ_ChDesp, TRUE}, /* Uzbekistan */				
-	{"VE", CE, Country_VE_ChDesp, TRUE}, /* Venezuela */				
-	{"VN", CE, Country_VN_ChDesp, TRUE}, /* Viet Nam */					
-	{"YE", CE, Country_YE_ChDesp, TRUE}, /* Yemen */					
-	{"ZW", CE, Country_ZW_ChDesp, TRUE}, /* Zimbabwe */	
-	{"EU", CE, Country_EU_ChDesp, TRUE}, /* Europe */
+	{"UY", CE, Country_UY_ChDesp, FALSE}, /* Uruguay */					
+	{"UZ", CE, Country_UZ_ChDesp, FALSE}, /* Uzbekistan */				
+	{"VE", CE, Country_VE_ChDesp, FALSE}, /* Venezuela */				
+	{"VN", CE, Country_VN_ChDesp, FALSE}, /* Viet Nam */					
+	{"YE", CE, Country_YE_ChDesp, FALSE}, /* Yemen */					
+	{"ZW", CE, Country_ZW_ChDesp, FALSE}, /* Zimbabwe */	
+	{"EU", CE, Country_EU_ChDesp, FALSE}, /* Europe */
 	{"NA", FCC,Country_NA_ChDesp, FALSE}, /* North America */
 	{"WO", FCC, Country_WO_ChDesp, FALSE}, /* World Wide */
 	{""  , 0,  NULL, FALSE}	     , /* End */	
@@ -1863,12 +1863,12 @@ static UCHAR FillChList(
 		if (!strncmp((RTMP_STRING *) pAd->CommonCfg.CountryCode, "JP", 2))
         {
             /* for JP, ch14 can only be used when PhyMode is "B only" */
-            if ( (channel==14) && 
+            /*if ( (channel==14) && 
 			(!WMODE_EQUAL(pAd->CommonCfg.PhyMode, WMODE_B)))
             {
                     pChDesp->NumOfCh--;
                     break;
-            }
+            }*/
         }
 /*New FCC spec restrict the used channel under DFS */
 #ifdef CONFIG_AP_SUPPORT	
@@ -2047,124 +2047,124 @@ VOID BuildBeaconChList(
 
 COUNTRY_PROP CountryProp[]=
 {
-	{"AL", CE, TRUE}, /* Albania */
-	{"DZ", CE, TRUE }, /* Algeria */
-	{"AR", CE, TRUE }, /* Argentina */
-	{"AM", CE, TRUE }, /* Armenia */
-	{"AW", CE, TRUE }, /* Aruba */
+	{"AL", CE, FALSE}, /* Albania */
+	{"DZ", CE, FALSE }, /* Algeria */
+	{"AR", CE, FALSE }, /* Argentina */
+	{"AM", CE, FALSE }, /* Armenia */
+	{"AW", CE, FALSE }, /* Aruba */
 	{"AU", CE, FALSE }, /* Australia */
-	{"AT", CE, TRUE }, /* Austria */
-	{"AZ", CE, TRUE }, /* Azerbaijan */
-	{"BH", CE, TRUE }, /* Bahrain */
-	{"BD", CE, TRUE }, /* Bangladesh */
-	{"BB", CE, TRUE }, /* Barbados */
-	{"BY", CE, TRUE }, /* Belarus */
-	{"BE", CE, TRUE }, /* Belgium */
-	{"BZ", CE, TRUE }, /* Belize */
-	{"BO", CE, TRUE }, /* Bolivia */
-	{"BA", CE, TRUE }, /* Bosnia and Herzegovina */
+	{"AT", CE, FALSE }, /* Austria */
+	{"AZ", CE, FALSE }, /* Azerbaijan */
+	{"BH", CE, FALSE }, /* Bahrain */
+	{"BD", CE, FALSE }, /* Bangladesh */
+	{"BB", CE, FALSE }, /* Barbados */
+	{"BY", CE, FALSE }, /* Belarus */
+	{"BE", CE, FALSE }, /* Belgium */
+	{"BZ", CE, FALSE }, /* Belize */
+	{"BO", CE, FALSE }, /* Bolivia */
+	{"BA", CE, FALSE }, /* Bosnia and Herzegovina */
 	{"BR", CE, FALSE }, /* Brazil */
-	{"BN", CE, TRUE }, /* Brunei Darussalam */
-	{"BG", CE, TRUE }, /* Bulgaria */
-	{"KH", CE, TRUE }, /* Cambodia */
+	{"BN", CE, FALSE }, /* Brunei Darussalam */
+	{"BG", CE, FALSE }, /* Bulgaria */
+	{"KH", CE, FALSE }, /* Cambodia */
 	{"CA", FCC, FALSE}, /* Canada */
-	{"CL", CE, TRUE }, /* Chile */
+	{"CL", CE, FALSE }, /* Chile */
 	{"CN", CE, FALSE }, /* China */
-	{"CO", CE, TRUE }, /* Colombia */
-	{"CR", CE, TRUE }, /* Costa Rica */
-	{"HR", CE, TRUE }, /* Croatia */
-	{"CY", CE, TRUE }, /* Cyprus */
-	{"CZ", CE, TRUE }, /* Czech Republic */
-	{"DK", CE, TRUE }, /* Denmark */
-	{"DO", CE, TRUE }, /* Dominican Republic */
-	{"EC", CE, TRUE }, /* Ecuador */
-	{"EG", CE, TRUE }, /* Egypt */
-	{"SV", CE, TRUE }, /* El Salvador */
-	{"EE", CE, TRUE }, /* Estonia */
-	{"FI", CE, TRUE }, /* Finland */
-	{"FR", CE, TRUE }, /* France */
-	{"GE", CE, TRUE }, /* Georgia */
-	{"DE", CE, TRUE }, /* Germany */
-	{"GR", CE, TRUE }, /* Greece */
-	{"GL", CE, TRUE }, /* Greenland */
-	{"GD", CE, TRUE }, /* Grenada */
-	{"GU", CE, TRUE }, /* Guam */
-	{"GT", CE, TRUE }, /* Guatemala */
-	{"HT", CE, TRUE }, /* Haiti */
-	{"HN", CE, TRUE }, /* Honduras */
-	{"HK", CE, TRUE }, /* Hong Kong */
-	{"HU", CE, TRUE }, /* Hungary */
-	{"IS", CE, TRUE }, /* Iceland */
-	{"IN", CE, TRUE }, /* India */
-	{"ID", CE, TRUE }, /* Indonesia */
-	{"IR", CE, TRUE }, /* Iran, Islamic Republic of */
-	{"IE", CE, TRUE }, /* Ireland */
+	{"CO", CE, FALSE }, /* Colombia */
+	{"CR", CE, FALSE }, /* Costa Rica */
+	{"HR", CE, FALSE }, /* Croatia */
+	{"CY", CE, FALSE }, /* Cyprus */
+	{"CZ", CE, FALSE }, /* Czech Republic */
+	{"DK", CE, FALSE }, /* Denmark */
+	{"DO", CE, FALSE }, /* Dominican Republic */
+	{"EC", CE, FALSE }, /* Ecuador */
+	{"EG", CE, FALSE }, /* Egypt */
+	{"SV", CE, FALSE }, /* El Salvador */
+	{"EE", CE, FALSE }, /* Estonia */
+	{"FI", CE, FALSE }, /* Finland */
+	{"FR", CE, FALSE }, /* France */
+	{"GE", CE, FALSE }, /* Georgia */
+	{"DE", CE, FALSE }, /* Germany */
+	{"GR", CE, FALSE }, /* Greece */
+	{"GL", CE, FALSE }, /* Greenland */
+	{"GD", CE, FALSE }, /* Grenada */
+	{"GU", CE, FALSE }, /* Guam */
+	{"GT", CE, FALSE }, /* Guatemala */
+	{"HT", CE, FALSE }, /* Haiti */
+	{"HN", CE, FALSE }, /* Honduras */
+	{"HK", CE, FALSE }, /* Hong Kong */
+	{"HU", CE, FALSE }, /* Hungary */
+	{"IS", CE, FALSE }, /* Iceland */
+	{"IN", CE, FALSE }, /* India */
+	{"ID", CE, FALSE }, /* Indonesia */
+	{"IR", CE, FALSE }, /* Iran, Islamic Republic of */
+	{"IE", CE, FALSE }, /* Ireland */
 	{"IL", CE, FALSE }, /* Israel */
-	{"IT", CE, TRUE }, /* Italy */
-	{"JM", CE, TRUE }, /* Jamaica */
+	{"IT", CE, FALSE }, /* Italy */
+	{"JM", CE, FALSE }, /* Jamaica */
 	{"JP", JAP, FALSE}, /* Japan */		
-	{"JO", CE, TRUE }, /* Jordan */	
-	{"KZ", CE, TRUE }, /* Kazakhstan */			
-	{"KE", CE, TRUE }, /* Kenya */	
-	{"KP", CE, TRUE }, /* Korea, Democratic People's Republic of */
+	{"JO", CE, FALSE }, /* Jordan */	
+	{"KZ", CE, FALSE }, /* Kazakhstan */			
+	{"KE", CE, FALSE }, /* Kenya */	
+	{"KP", CE, FALSE }, /* Korea, Democratic People's Republic of */
 	{"KR", CE, FALSE }, /* Korea, Republic of */			
-	{"KW", CE, TRUE }, /* Kuwait */			
-	{"LV", CE, TRUE }, /* Latvia */			
-	{"LB", CE, TRUE }, /* Lebanon */			
-	{"LI", CE, TRUE }, /* Liechtenstein */			
-	{"LT", CE, TRUE }, /* Lithuania */			
-	{"LU", CE, TRUE }, /* Luxembourg */			
-	{"MO", CE, TRUE }, /* Macao */			
-	{"MK", CE, TRUE }, /* Macedonia, Republic of */			
-	{"MY", CE, TRUE }, /* Malaysia */			
-	{"MT", CE, TRUE }, /* Malta */			
+	{"KW", CE, FALSE }, /* Kuwait */			
+	{"LV", CE, FALSE }, /* Latvia */			
+	{"LB", CE, FALSE }, /* Lebanon */			
+	{"LI", CE, FALSE }, /* Liechtenstein */			
+	{"LT", CE, FALSE }, /* Lithuania */			
+	{"LU", CE, FALSE }, /* Luxembourg */			
+	{"MO", CE, FALSE }, /* Macao */			
+	{"MK", CE, FALSE }, /* Macedonia, Republic of */			
+	{"MY", CE, FALSE }, /* Malaysia */			
+	{"MT", CE, FALSE }, /* Malta */			
 	{"MX", CE, FALSE }, /* Mexico */			
-	{"MC", CE, TRUE }, /* Monaco */			
-	{"MA", CE, TRUE }, /* Morocco */			
-	{"NP", CE, TRUE }, /* Nepal */			
-	{"NL", CE, TRUE }, /* Netherlands */			
-	{"AN", CE, TRUE }, /* Netherlands Antilles */			
-	{"NZ", CE, TRUE }, /* New Zealand */			
-	{"NO", CE, TRUE }, /* Norway */			
-	{"OM", CE, TRUE }, /* Oman */		
-	{"PK", CE, TRUE }, /* Pakistan */		
-	{"PA", CE, TRUE }, /* Panama */	
-	{"PG", CE, TRUE }, /* Papua New Guinea */	
-	{"PE", CE, TRUE }, /* Peru */			
-	{"PH", CE, TRUE }, /* Philippines */		
-	{"PL", CE, TRUE }, /* Poland */			
-	{"PT", CE, TRUE }, /* Portuga l*/			
-	{"PR", CE, TRUE }, /* Puerto Rico */			
-	{"QA", CE, TRUE }, /* Qatar */			
-	{"RO", CE, TRUE }, /* Romania */			
+	{"MC", CE, FALSE }, /* Monaco */			
+	{"MA", CE, FALSE }, /* Morocco */			
+	{"NP", CE, FALSE }, /* Nepal */			
+	{"NL", CE, FALSE }, /* Netherlands */			
+	{"AN", CE, FALSE }, /* Netherlands Antilles */			
+	{"NZ", CE, FALSE }, /* New Zealand */			
+	{"NO", CE, FALSE }, /* Norway */			
+	{"OM", CE, FALSE }, /* Oman */		
+	{"PK", CE, FALSE }, /* Pakistan */		
+	{"PA", CE, FALSE }, /* Panama */	
+	{"PG", CE, FALSE }, /* Papua New Guinea */	
+	{"PE", CE, FALSE }, /* Peru */			
+	{"PH", CE, FALSE }, /* Philippines */		
+	{"PL", CE, FALSE }, /* Poland */			
+	{"PT", CE, FALSE }, /* Portuga l*/			
+	{"PR", CE, FALSE }, /* Puerto Rico */			
+	{"QA", CE, FALSE }, /* Qatar */			
+	{"RO", CE, FALSE }, /* Romania */			
 	{"RU", CE, FALSE }, /* Russian Federation */			
-	{"BL", CE, TRUE }, /* Saint Barth'elemy */			
-	{"SA", CE, TRUE }, /* Saudi Arabia */			
-	{"SG", CE, TRUE }, /* Singapore */			
-	{"SK", CE, TRUE }, /* Slovakia */			
-	{"SI", CE, TRUE }, /* Slovenia */					
+	{"BL", CE, FALSE }, /* Saint Barth'elemy */			
+	{"SA", CE, FALSE }, /* Saudi Arabia */			
+	{"SG", CE, FALSE }, /* Singapore */			
+	{"SK", CE, FALSE }, /* Slovakia */			
+	{"SI", CE, FALSE }, /* Slovenia */					
 	{"ZA", CE, FALSE }, /* South Africa */					
-	{"ES", CE, TRUE }, /* Spain */				
-	{"LK", CE, TRUE }, /* Sri Lanka */				
-	{"SE", CE, TRUE }, /* Sweden */					
-	{"CH", CE, TRUE }, /* Switzerland */					
-	{"SY", CE, TRUE }, /* Syrian Arab Republic */					
+	{"ES", CE, FALSE }, /* Spain */				
+	{"LK", CE, FALSE }, /* Sri Lanka */				
+	{"SE", CE, FALSE }, /* Sweden */					
+	{"CH", CE, FALSE }, /* Switzerland */					
+	{"SY", CE, FALSE }, /* Syrian Arab Republic */					
 	{"TW", FCC, FALSE}, /* Taiwan */			
 	{"TH", CE, FALSE }, /* Thailand */					
-	{"TT", CE, TRUE }, /* Trinidad and Tobago */			
-	{"TN", CE, TRUE }, /* Tunisia */				
-	{"TR", CE, TRUE }, /* Turkey */					
-	{"UA", CE, TRUE }, /* Ukraine */					
-	{"AE", CE, TRUE }, /* United Arab Emirates */					
-	{"GB", CE, TRUE }, /* United Kingdom */			
+	{"TT", CE, FALSE }, /* Trinidad and Tobago */			
+	{"TN", CE, FALSE }, /* Tunisia */				
+	{"TR", CE, FALSE }, /* Turkey */					
+	{"UA", CE, FALSE }, /* Ukraine */					
+	{"AE", CE, FALSE }, /* United Arab Emirates */					
+	{"GB", CE, FALSE }, /* United Kingdom */			
 	{"US", FCC, FALSE}, /* United States */			
-	{"UY", CE, TRUE }, /* Uruguay */					
-	{"UZ", CE, TRUE }, /* Uzbekistan */				
-	{"VE", CE, TRUE }, /* Venezuela */				
-	{"VN", CE, TRUE }, /* Viet Nam */					
-	{"YE", CE, TRUE }, /* Yemen */					
-	{"ZW", CE, TRUE }, /* Zimbabwe */	
-	{"EU", CE, TRUE }, /* Europe */
+	{"UY", CE, FALSE }, /* Uruguay */					
+	{"UZ", CE, FALSE }, /* Uzbekistan */				
+	{"VE", CE, FALSE }, /* Venezuela */				
+	{"VN", CE, FALSE }, /* Viet Nam */					
+	{"YE", CE, FALSE }, /* Yemen */					
+	{"ZW", CE, FALSE }, /* Zimbabwe */	
+	{"EU", CE, FALSE }, /* Europe */
 	{"NA", FCC, FALSE}, /* North America */
 	{"WO", FCC, FALSE}, /* World Wide */
 	{""  , 0, FALSE}	     , /* End */	
