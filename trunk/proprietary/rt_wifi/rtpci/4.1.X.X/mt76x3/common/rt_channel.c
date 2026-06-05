@@ -1996,7 +1996,7 @@ COUNTRY_PROP CountryProp[]=
 	{""  , 0, FALSE}	     , /* End */	
 };
 
-#ifndef EXT_BUILD_CHANNEL_LIST
+#ifdef FALSE
 static PCOUNTRY_PROP GetCountryProp(
 	IN PUCHAR CntryCode)
 {
