@@ -26,13 +26,20 @@ CH_FREQ_MAP CH_HZ_ID_MAP[]=
 			{40, 5200},
 			{44, 5220},
 			{48, 5240},
+			{50, 5250},        
 			{52, 5260},
+			{54, 5270},         
 			{56, 5280},
+			{58, 5290},        
 			{60, 5300},
+			{62, 5310},			
 			{64, 5320},
 			{149, 5745},
+			{151, 5755},             
 			{153, 5765},
+			{155, 5775},			
 			{157, 5785},
+			{159, 5795},			
 			{161, 5805},
 			{165, 5825},
 			{167, 5835},
@@ -42,16 +49,27 @@ CH_FREQ_MAP CH_HZ_ID_MAP[]=
 						
 			/* HiperLAN2 */
 			{100, 5500},
+			{102, 5510},			
 			{104, 5520},
+			{106, 5530},			
 			{108, 5540},
+			{110, 5550},		
 			{112, 5560},
+			{114, 5570},
 			{116, 5580},
+			{118, 5590},			
 			{120, 5600},
+			{122, 5610},			
 			{124, 5620},
+			{126, 5630},			
 			{128, 5640},
 			{132, 5660},
+			{134, 5670},			
 			{136, 5680},
+			{138, 5690},			
 			{140, 5700},
+			{142, 5710},	
+			{144, 5720},            
 						
 			/* Japan MMAC */
 			{34, 5170},
@@ -74,31 +92,31 @@ INT	CH_HZ_ID_MAP_NUM = (sizeof(CH_HZ_ID_MAP)/sizeof(CH_FREQ_MAP));
 
 CH_DESC Country_Region0_ChDesc_2GHZ[] =
 {
-	{1, 11, CHANNEL_DEFAULT_PROP},
+	{1, 14, CHANNEL_DEFAULT_PROP},
 	{}
 };
 
 CH_DESC Country_Region1_ChDesc_2GHZ[] =
 {
-	{1, 13, CHANNEL_DEFAULT_PROP},
+	{1, 14, CHANNEL_DEFAULT_PROP},
 	{}
 };
 
 CH_DESC Country_Region2_ChDesc_2GHZ[] =
 {
-	{10, 2, CHANNEL_DEFAULT_PROP},
+	{1, 14, CHANNEL_DEFAULT_PROP},
 	{}
 };
 
 CH_DESC Country_Region3_ChDesc_2GHZ[] =
 {
-	{10, 4, CHANNEL_DEFAULT_PROP},
+	{1, 14, CHANNEL_DEFAULT_PROP},
 	{}
 };
 
 CH_DESC Country_Region4_ChDesc_2GHZ[] =
 {
-	{14, 1, CHANNEL_DEFAULT_PROP},
+	{1, 14, CHANNEL_DEFAULT_PROP},
 	{}
 };
 
@@ -110,27 +128,25 @@ CH_DESC Country_Region5_ChDesc_2GHZ[] =
 
 CH_DESC Country_Region6_ChDesc_2GHZ[] =
 {
-	{3, 7, CHANNEL_DEFAULT_PROP},
+	{1, 14, CHANNEL_DEFAULT_PROP},
 	{}
 };
 
 CH_DESC Country_Region7_ChDesc_2GHZ[] =
 {
-	{5, 9, CHANNEL_DEFAULT_PROP},
+	{1, 14, CHANNEL_DEFAULT_PROP},
 	{}
 };
 
 CH_DESC Country_Region31_ChDesc_2GHZ[] =
 {
-	{1, 11, CHANNEL_DEFAULT_PROP},
-	{12, 3, CHANNEL_PASSIVE_SCAN},
+	{1, 14, CHANNEL_DEFAULT_PROP},
 	{}
 };
 
 CH_DESC Country_Region32_ChDesc_2GHZ[] =
 {
-	{1, 11, CHANNEL_DEFAULT_PROP},
-	{12, 2, CHANNEL_PASSIVE_SCAN},	
+	{1, 14, CHANNEL_DEFAULT_PROP},	
 	{}
 };
 
@@ -158,17 +174,24 @@ COUNTRY_REGION_CH_DESC Country_Region_ChDesc_2GHZ[] =
 
 UINT16 const Country_Region_GroupNum_2GHZ = sizeof(Country_Region_ChDesc_2GHZ) / sizeof(COUNTRY_REGION_CH_DESC);
 
+#ifdef DFS_SUPPORT
 CH_DESC Country_Region0_ChDesc_5GHZ[] =
 {
 	{36, 8, CHANNEL_DEFAULT_PROP},
-	{149, 5, CHANNEL_DEFAULT_PROP},
+	{52, 4, CHANNEL_DEFAULT_PROP},
+	{100, 12, CHANNEL_DEFAULT_PROP},
+	{132, 4, CHANNEL_DEFAULT_PROP},
+	{149, 7, CHANNEL_DEFAULT_PROP},
 	{}
 };
 
 CH_DESC Country_Region1_ChDesc_5GHZ[] =
 {
 	{36, 8, CHANNEL_DEFAULT_PROP},
-	{100, 11, CHANNEL_DEFAULT_PROP},
+	{52, 4, CHANNEL_DEFAULT_PROP},
+	{100, 12, CHANNEL_DEFAULT_PROP},
+	{132, 4, CHANNEL_DEFAULT_PROP},
+	{149, 7, CHANNEL_DEFAULT_PROP},
 	{}
 };
 
@@ -184,6 +207,32 @@ CH_DESC Country_Region3_ChDesc_5GHZ[] =
 	{149, 4, CHANNEL_DEFAULT_PROP},
 	{}
 };
+#else
+CH_DESC Country_Region0_ChDesc_5GHZ[] =
+{
+	{36, 4, CHANNEL_DEFAULT_PROP},
+	{149, 5, CHANNEL_DEFAULT_PROP},
+	{}
+};
+
+CH_DESC Country_Region1_ChDesc_5GHZ[] =
+{
+	{36, 4, CHANNEL_DEFAULT_PROP},
+	{}
+};
+
+CH_DESC Country_Region2_ChDesc_5GHZ[] =
+{
+	{36, 4, CHANNEL_DEFAULT_PROP},
+	{}
+};
+
+CH_DESC Country_Region3_ChDesc_5GHZ[] =
+{
+	{149, 4, CHANNEL_DEFAULT_PROP},
+	{}
+};
+#endif
 
 CH_DESC Country_Region4_ChDesc_5GHZ[] =
 {
@@ -205,7 +254,9 @@ CH_DESC Country_Region6_ChDesc_5GHZ[] =
 CH_DESC Country_Region7_ChDesc_5GHZ[] =
 {
 	{36, 8, CHANNEL_DEFAULT_PROP},
-	{100, 11, CHANNEL_DEFAULT_PROP},
+	{52, 4, CHANNEL_DEFAULT_PROP},
+	{100, 12, CHANNEL_DEFAULT_PROP},
+	{132, 4, CHANNEL_DEFAULT_PROP},
 	{149, 7, CHANNEL_DEFAULT_PROP},
 	{}
 };
@@ -216,14 +267,22 @@ CH_DESC Country_Region8_ChDesc_5GHZ[] =
 	{}
 };
 
+#ifdef DFS_SUPPORT
 CH_DESC Country_Region9_ChDesc_5GHZ[] =
 {
 	{36, 8 , CHANNEL_DEFAULT_PROP},
 	{100, 5, CHANNEL_DEFAULT_PROP},
 	{132, 3, CHANNEL_DEFAULT_PROP},
-	{149, 5, CHANNEL_DEFAULT_PROP},
+	{149, 7, CHANNEL_DEFAULT_PROP},
 	{}
 };
+#else
+CH_DESC Country_Region9_ChDesc_5GHZ[] =
+{
+	{36, 4 , CHANNEL_DEFAULT_PROP},
+	{}
+};
+#endif
 
 CH_DESC Country_Region10_ChDesc_5GHZ[] =
 {
@@ -240,26 +299,27 @@ CH_DESC Country_Region11_ChDesc_5GHZ[] =
 	{}		
 };
 
+/* for FCC capable of using 144 , mapping of Country_Region1 */
 CH_DESC Country_Region12_ChDesc_5GHZ[] =
 {
 	{36, 8, CHANNEL_DEFAULT_PROP},
-	{100, 11, CHANNEL_DEFAULT_PROP},
+	{100, 12, CHANNEL_DEFAULT_PROP},
 	{}
 };
-
+/* for FCC capable of using 144 , mapping of Country_Region7 */
 CH_DESC Country_Region13_ChDesc_5GHZ[] =
 {
-	{52, 4, CHANNEL_DEFAULT_PROP},
-	{100, 11, CHANNEL_DEFAULT_PROP},
-	{149, 4, CHANNEL_DEFAULT_PROP},
+	{36, 8, CHANNEL_DEFAULT_PROP},
+	{100, 12, CHANNEL_DEFAULT_PROP},
+	{149, 5, CHANNEL_DEFAULT_PROP},
 	{}	
 };
-
+/* for FCC capable of using 144 , mapping of Country_Region9 */
 CH_DESC Country_Region14_ChDesc_5GHZ[] =
 {
 	{36, 8, CHANNEL_DEFAULT_PROP},
 	{100, 5, CHANNEL_DEFAULT_PROP},
-	{136, 2, CHANNEL_DEFAULT_PROP},
+	{132, 4, CHANNEL_DEFAULT_PROP},
 	{149, 5, CHANNEL_DEFAULT_PROP},
 	{}	
 };
@@ -324,29 +384,29 @@ CH_DESC Country_Region22_ChDesc_5GHZ[] =
 
 COUNTRY_REGION_CH_DESC Country_Region_ChDesc_5GHZ[] =
 {
-	{REGION_0_A_BAND, Country_Region0_ChDesc_5GHZ},
-	{REGION_1_A_BAND, Country_Region1_ChDesc_5GHZ},
-	{REGION_2_A_BAND, Country_Region2_ChDesc_5GHZ},
-	{REGION_3_A_BAND, Country_Region3_ChDesc_5GHZ},
-	{REGION_4_A_BAND, Country_Region4_ChDesc_5GHZ},
-	{REGION_5_A_BAND, Country_Region5_ChDesc_5GHZ},
-	{REGION_6_A_BAND, Country_Region6_ChDesc_5GHZ},
+	{REGION_0_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_1_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_2_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_3_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_4_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_5_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_6_A_BAND, Country_Region7_ChDesc_5GHZ},
 	{REGION_7_A_BAND, Country_Region7_ChDesc_5GHZ},
-	{REGION_8_A_BAND, Country_Region8_ChDesc_5GHZ},
-	{REGION_9_A_BAND, Country_Region9_ChDesc_5GHZ},
-	{REGION_10_A_BAND, Country_Region10_ChDesc_5GHZ},
-	{REGION_11_A_BAND, Country_Region11_ChDesc_5GHZ},
-	{REGION_12_A_BAND, Country_Region12_ChDesc_5GHZ},
-	{REGION_13_A_BAND, Country_Region13_ChDesc_5GHZ},
-	{REGION_14_A_BAND, Country_Region14_ChDesc_5GHZ},
-	{REGION_15_A_BAND, Country_Region15_ChDesc_5GHZ},
-	{REGION_16_A_BAND, Country_Region16_ChDesc_5GHZ},
-	{REGION_17_A_BAND, Country_Region17_ChDesc_5GHZ},
-	{REGION_18_A_BAND, Country_Region18_ChDesc_5GHZ},
-	{REGION_19_A_BAND, Country_Region19_ChDesc_5GHZ},
-	{REGION_20_A_BAND, Country_Region20_ChDesc_5GHZ},
-	{REGION_21_A_BAND, Country_Region21_ChDesc_5GHZ},
-	{REGION_22_A_BAND, Country_Region22_ChDesc_5GHZ},
+	{REGION_8_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_9_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_10_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_11_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_12_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_13_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_14_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_15_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_16_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_17_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_18_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_19_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_20_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_21_A_BAND, Country_Region7_ChDesc_5GHZ},
+	{REGION_22_A_BAND, Country_Region7_ChDesc_5GHZ},
 	{}
 };
 
@@ -417,32 +477,11 @@ UCHAR GetChannelFlag(PCH_DESC pChDesc, UCHAR index)
 }
 
 #ifdef EXT_BUILD_CHANNEL_LIST
-PCH_REGION GetChRegion(
-	IN PUCHAR CntryCode)
-{
-	INT loop = 0;
-	PCH_REGION pChRegion = NULL;
-
-	while (strcmp((RTMP_STRING *) ChRegion[loop].CountReg, "") != 0) {
-		if (strncmp((RTMP_STRING *) ChRegion[loop].CountReg, (RTMP_STRING *) CntryCode, 2) == 0) {
-			pChRegion = &ChRegion[loop];
-			break;
-		}
-		loop++;
-	}
-
-	/* Default: use WO*/
-	if (pChRegion == NULL)
-		pChRegion = GetChRegion("WO");
-
-	return pChRegion;
-}
-
 
 /*Albania*/
 CH_DESP Country_AL_ChDesp[] =
 {
-	{ 1, 13, 20, BOTH, FALSE},  	/*2402~2482MHz, Ch 1~13, Max BW: 20 */
+	{ 1, 14, 20, BOTH, FALSE},  	/*2402~2482MHz, Ch 1~13, Max BW: 20 */
 	{ 0},               	    	/* end*/
 };
 /*Algeria*/
@@ -612,7 +651,7 @@ CH_DESP Country_CA_ChDesp[] =
 	{ 1,   11, 27, BOTH, FALSE},	/*2402~2472MHz, Ch 1~11,   Max BW: 40 */
 	{ 36,   4, 17, IDOR, FALSE},	/*5170~5250MHz, Ch 36~48, Max BW: 40 */ 
 	{ 52,   4, 20, BOTH, TRUE}, 	/*5250~5330MHz, Ch 52~64, Max BW: 40 */
-	{ 100, 11, 20, BOTH, TRUE}, 	/*5490~5710MHz, Ch 100~140, Max BW: 40 */
+	{ 100, 12, 20, BOTH, TRUE}, 	/*5490~5710MHz, Ch 100~144, Max BW: 40 */
 	{ 149,  5, 30, BOTH, FALSE},	/*5735~5835MHz, Ch 149~165, Max BW: 40 */
 	{ 0},               	    	/* end*/
 };
@@ -909,10 +948,10 @@ CH_DESP Country_IT_ChDesp[] =
 /*Jamaica*/		
 CH_DESP Country_JM_ChDesp[] =
 {
-	{ 1,   13, 20, BOTH, FALSE},	/*2402~2482MHz, Ch 1~13,   Max BW: 40 */
-	{ 36,   4, 17, BOTH, FALSE},	/*5170~5250MHz, Ch 36~48, Max BW: 40 */
-	{ 52,   4, 20, BOTH, TRUE}, 	/*5250~5330MHz, Ch 52~64, Max BW: 40 */
-	{ 100, 11, 20, BOTH, TRUE}, 	/*5490~5710MHz, Ch 100~140, Max BW: 40 */
+	{ 1,   14, 27, BOTH, FALSE},	/*2402~2482MHz, Ch 1~13,   Max BW: 40 */
+	{ 36,   4, 24, BOTH, FALSE},	/*5170~5250MHz, Ch 36~48, Max BW: 40 */
+	{ 52,   4, 24, BOTH, FALSE}, 	/*5250~5330MHz, Ch 52~64, Max BW: 40 */
+	{ 100, 12, 30, BOTH, FALSE}, 	/*5490~5710MHz, Ch 100~140, Max BW: 40 */
 	{ 149,  5, 30, BOTH, FALSE},	/*5735~5835MHz, Ch 149~165, Max BW: 40 */
 	{ 0},               	    	/* end*/
 };
@@ -1214,8 +1253,11 @@ CH_DESP Country_RO_ChDesp[] =
 /*Russian Federation*/		
 CH_DESP Country_RU_ChDesp[] =
 {
-	{ 1,   13, 20, BOTH, FALSE},	/*2402~2482MHz, Ch 1~13,   Max BW: 40 */
-	{ 149,  5, 30, BOTH, FALSE},	/*5735~5835MHz, Ch 149~165, Max BW: 20 */		
+	{ 1,   14, 20, BOTH, FALSE},	/* 2.4 G, ch 1~14*/
+	{ 36,   4, 23, BOTH, FALSE},	/*5170~5250MHz, Ch 36~48, Max BW: 40 */
+	{ 52,   4, 23, BOTH, FALSE}, 	/*5250~5330MHz, Ch 52~64, Max BW: 40 */
+	{ 132,  4, 23, BOTH, FALSE}, 	/*5650~5710MHz, Ch 132~144, Max BW: 40 */
+	{ 149,  5, 23, BOTH, FALSE},	/*5735~5835MHz, Ch 149~165, Max BW: 40 */
 	{ 0},               	    	/* end*/
 };
 /*Saint Barth'elemy*/		
@@ -1387,10 +1429,10 @@ CH_DESP Country_GB_ChDesp[] =
 CH_DESP Country_US_ChDesp[] =
 {
 	{ 1,   11, 27, BOTH, FALSE},	/*2402~2472MHz, Ch 1~11,   Max BW: 40 */
-	{ 36,   4, 17, IDOR, FALSE},	/*5170~5250MHz, Ch 36~48, Max BW: 40 */
-	{ 52,   4, 20, BOTH, TRUE}, 	/*5250~5330MHz, Ch 52~64, Max BW: 40 */
-	{ 100,  5, 20, BOTH, TRUE}, 	/*5490~5600MHz, Ch 100~116, Max BW: 40 */
-	{ 132,  3, 20, BOTH, TRUE}, 	/*5650~5710MHz, Ch 132~140, Max BW: 40 */
+	{ 36,   4, 30, BOTH, FALSE},	/*5170~5250MHz, Ch 36~48, Max BW: 40 */
+	{ 52,   4, 24, BOTH, TRUE}, 	/*5250~5330MHz, Ch 52~64, Max BW: 40 */
+	{ 100,  5, 24, BOTH, TRUE}, 	/*5490~5600MHz, Ch 100~116, Max BW: 40 */
+	{ 132,  4, 24, BOTH, TRUE}, 	/*5650~5710MHz, Ch 132~144, Max BW: 40 */
 	{ 149,  5, 30, BOTH, FALSE},	/*5735~5835MHz, Ch 149~165, Max BW: 40 */
 	{ 0},               	    	/* end*/
 };		
@@ -1462,138 +1504,159 @@ CH_DESP Country_NA_ChDesp[] =
 CH_DESP Country_WO_ChDesp[] =
 {
 	{ 1,   13, 20, BOTH, FALSE},	/* 2.4 G, ch 1~13*/
-	{ 36,   4, 17, BOTH, FALSE},	/* 5G band 1, ch 36~48*/
-	{ 149,	5, 22, BOTH, FALSE},	/* 5G band 4, ch 149~165*/
+	{ 1,   13, 20, BOTH, FALSE},	/*2402~2482MHz, Ch 1~13,   Max BW: 40 */
+	{ 149,  5, 30, BOTH, FALSE},	/*5735~5835MHz, Ch 149~165, Max BW: 20 */		
 	{ 0},               	    	/* end*/
 };
 
 CH_REGION ChRegion[] =
 {
-	{"AL", CE, Country_AL_ChDesp, TRUE}, /* Albania */
-	{"DZ", CE, Country_DZ_ChDesp, TRUE}, /* Algeria */
-	{"AR", CE, Country_AR_ChDesp, TRUE}, /* Argentina */
-	{"AM", CE, Country_AM_ChDesp, TRUE}, /* Armenia */
-	{"AW", CE, Country_AW_ChDesp, TRUE}, /* Aruba */
-	{"AU", CE, Country_AU_ChDesp, FALSE}, /* Australia */
-	{"AT", CE, Country_AT_ChDesp, TRUE}, /* Austria */
-	{"AZ", CE, Country_AZ_ChDesp, TRUE}, /* Azerbaijan */
-	{"BH", CE, Country_BH_ChDesp, TRUE}, /* Bahrain */
-	{"BD", CE, Country_BD_ChDesp, TRUE}, /* Bangladesh */
-	{"BB", CE, Country_BB_ChDesp, TRUE}, /* Barbados */
-	{"BY", CE, Country_BY_ChDesp, TRUE}, /* Belarus */
-	{"BE", CE, Country_BE_ChDesp, TRUE}, /* Belgium */
-	{"BZ", CE, Country_BZ_ChDesp, TRUE}, /* Belize */
-	{"BO", CE, Country_BO_ChDesp, TRUE}, /* Bolivia */
-	{"BA", CE, Country_BA_ChDesp, TRUE}, /* Bosnia and Herzegovina */
-	{"BR", CE, Country_BR_ChDesp, FALSE}, /* Brazil */
-	{"BN", CE, Country_BN_ChDesp, TRUE}, /* Brunei Darussalam */
-	{"BG", CE, Country_BG_ChDesp, TRUE}, /* Bulgaria */
-	{"KH", CE, Country_KH_ChDesp, TRUE}, /* Cambodia */
-	{"CA", FCC,Country_CA_ChDesp, FALSE}, /* Canada */
-	{"CL", CE, Country_CL_ChDesp, TRUE}, /* Chile */
-	{"CN", CHN, Country_CN_ChDesp, FALSE}, /* China */
-	{"CO", CE, Country_CO_ChDesp, TRUE}, /* Colombia */
-	{"CR", CE, Country_CR_ChDesp, TRUE}, /* Costa Rica */
-	{"HR", CE, Country_HR_ChDesp, TRUE}, /* Croatia */
-	{"CY", CE, Country_CY_ChDesp, TRUE}, /* Cyprus */
-	{"CZ", CE, Country_CZ_ChDesp, TRUE}, /* Czech Republic */
-	{"DK", CE, Country_DK_ChDesp, TRUE}, /* Denmark */
-	{"DO", CE, Country_DO_ChDesp, TRUE}, /* Dominican Republic */
-	{"EC", CE, Country_EC_ChDesp, TRUE}, /* Ecuador */
-	{"EG", CE, Country_EG_ChDesp, TRUE}, /* Egypt */
-	{"SV", CE, Country_SV_ChDesp, TRUE}, /* El Salvador */
-	{"EE", CE, Country_EE_ChDesp, TRUE}, /* Estonia */
-	{"FI", CE, Country_FI_ChDesp, TRUE}, /* Finland */
-	{"FR", CE, Country_FR_ChDesp, TRUE}, /* France */
-	{"GE", CE, Country_GE_ChDesp, TRUE}, /* Georgia */
-	{"DE", CE, Country_DE_ChDesp, TRUE}, /* Germany */
-	{"GR", CE, Country_GR_ChDesp, TRUE}, /* Greece */
-	{"GL", CE, Country_GL_ChDesp, TRUE}, /* Greenland */
-	{"GD", CE, Country_GD_ChDesp, TRUE}, /* Grenada */
-	{"GU", CE, Country_GU_ChDesp, TRUE}, /* Guam */
-	{"GT", CE, Country_GT_ChDesp, TRUE}, /* Guatemala */
-	{"HT", CE, Country_HT_ChDesp, TRUE}, /* Haiti */
-	{"HN", CE, Country_HN_ChDesp, TRUE}, /* Honduras */
-	{"HK", CE, Country_HK_ChDesp, TRUE}, /* Hong Kong */
-	{"HU", CE, Country_HU_ChDesp, TRUE}, /* Hungary */
-	{"IS", CE, Country_IS_ChDesp, TRUE}, /* Iceland */
-	{"IN", CE, Country_IN_ChDesp, TRUE}, /* India */
-	{"ID", CE, Country_ID_ChDesp, TRUE}, /* Indonesia */
-	{"IR", CE, Country_IR_ChDesp, TRUE}, /* Iran, Islamic Republic of */
-	{"IE", CE, Country_IE_ChDesp, TRUE}, /* Ireland */
-	{"IL", CE, Country_IL_ChDesp, FALSE}, /* Israel */
-	{"IT", CE, Country_IT_ChDesp, TRUE}, /* Italy */
-	{"JM", CE, Country_JM_ChDesp, TRUE}, /* Jamaica */
-	{"JP", JAP,Country_JP_ChDesp, FALSE}, /* Japan */		
-	{"JO", CE, Country_JO_ChDesp, TRUE}, /* Jordan */	
-	{"KZ", CE, Country_KZ_ChDesp, TRUE}, /* Kazakhstan */			
-	{"KE", CE, Country_KE_ChDesp, TRUE}, /* Kenya */	
-	{"KP", CE, Country_KP_ChDesp, TRUE}, /* Korea, Democratic People's Republic of */
-	{"KR", CE, Country_KR_ChDesp, FALSE}, /* Korea, Republic of */			
-	{"KW", CE, Country_KW_ChDesp, TRUE}, /* Kuwait */			
-	{"LV", CE, Country_LV_ChDesp, TRUE}, /* Latvia */			
-	{"LB", CE, Country_LB_ChDesp, TRUE}, /* Lebanon */			
-	{"LI", CE, Country_LI_ChDesp, TRUE}, /* Liechtenstein */			
-	{"LT", CE, Country_LT_ChDesp, TRUE}, /* Lithuania */			
-	{"LU", CE, Country_LU_ChDesp, TRUE}, /* Luxembourg */			
-	{"MO", CE, Country_MO_ChDesp, TRUE}, /* Macao */			
-	{"MK", CE, Country_MK_ChDesp, TRUE}, /* Macedonia, Republic of */			
-	{"MY", CE, Country_MY_ChDesp, TRUE}, /* Malaysia */			
-	{"MT", CE, Country_MT_ChDesp, TRUE}, /* Malta */			
-	{"MX", CE, Country_MX_ChDesp, FALSE}, /* Mexico */			
-	{"MC", CE, Country_MC_ChDesp, TRUE}, /* Monaco */			
-	{"MA", CE, Country_MA_ChDesp, TRUE}, /* Morocco */			
-	{"NP", CE, Country_NP_ChDesp, TRUE}, /* Nepal */			
-	{"NL", CE, Country_NL_ChDesp, TRUE}, /* Netherlands */			
-	{"AN", CE, Country_AN_ChDesp, TRUE}, /* Netherlands Antilles */			
-	{"NZ", CE, Country_NZ_ChDesp, TRUE}, /* New Zealand */			
-	{"NO", CE, Country_NO_ChDesp, TRUE}, /* Norway */			
-	{"OM", CE, Country_OM_ChDesp, TRUE}, /* Oman */		
-	{"PK", CE, Country_PK_ChDesp, TRUE}, /* Pakistan */		
-	{"PA", CE, Country_PA_ChDesp, TRUE}, /* Panama */	
-	{"PG", CE, Country_PG_ChDesp, TRUE}, /* Papua New Guinea */	
-	{"PE", CE, Country_PE_ChDesp, TRUE}, /* Peru */			
-	{"PH", CE, Country_PH_ChDesp, TRUE}, /* Philippines */		
-	{"PL", CE, Country_PL_ChDesp, TRUE}, /* Poland */			
-	{"PT", CE, Country_PT_ChDesp, TRUE}, /* Portuga l*/			
-	{"PR", CE, Country_PR_ChDesp, TRUE}, /* Puerto Rico */			
-	{"QA", CE, Country_QA_ChDesp, TRUE}, /* Qatar */			
-	{"RO", CE, Country_RO_ChDesp, TRUE}, /* Romania */			
-	{"RU", CE, Country_RU_ChDesp, FALSE}, /* Russian Federation */			
-	{"BL", CE, Country_BL_ChDesp, TRUE}, /* Saint Barth'elemy */			
-	{"SA", CE, Country_SA_ChDesp, TRUE}, /* Saudi Arabia */			
-	{"SG", CE, Country_SG_ChDesp, TRUE}, /* Singapore */			
-	{"SK", CE, Country_SK_ChDesp, TRUE}, /* Slovakia */			
-	{"SI", CE, Country_SI_ChDesp, TRUE}, /* Slovenia */					
-	{"ZA", CE, Country_ZA_ChDesp, FALSE}, /* South Africa */					
-	{"ES", CE, Country_ES_ChDesp, TRUE}, /* Spain */				
-	{"LK", CE, Country_LK_ChDesp, TRUE}, /* Sri Lanka */				
-	{"SE", CE, Country_SE_ChDesp, TRUE}, /* Sweden */					
-	{"CH", CE, Country_CH_ChDesp, TRUE}, /* Switzerland */					
-	{"SY", CE, Country_SY_ChDesp, TRUE}, /* Syrian Arab Republic */					
-	{"TW", FCC,Country_TW_ChDesp, FALSE}, /* Taiwan */			
-	{"TH", CE, Country_TH_ChDesp, FALSE}, /* Thailand */					
-	{"TT", CE, Country_TT_ChDesp, TRUE}, /* Trinidad and Tobago */			
-	{"TN", CE, Country_TN_ChDesp, TRUE}, /* Tunisia */				
-	{"TR", CE, Country_TR_ChDesp, TRUE}, /* Turkey */					
-	{"UA", CE, Country_UA_ChDesp, TRUE}, /* Ukraine */					
-	{"AE", CE, Country_AE_ChDesp, TRUE}, /* United Arab Emirates */					
-	{"GB", CE, Country_GB_ChDesp, TRUE}, /* United Kingdom */			
-	{"US", FCC,Country_US_ChDesp, FALSE}, /* United States */			
-	{"UY", CE, Country_UY_ChDesp, TRUE}, /* Uruguay */					
-	{"UZ", CE, Country_UZ_ChDesp, TRUE}, /* Uzbekistan */				
-	{"VE", CE, Country_VE_ChDesp, TRUE}, /* Venezuela */				
-	{"VN", CE, Country_VN_ChDesp, TRUE}, /* Viet Nam */					
-	{"YE", CE, Country_YE_ChDesp, TRUE}, /* Yemen */					
-	{"ZW", CE, Country_ZW_ChDesp, TRUE}, /* Zimbabwe */	
-	{"EU", CE, Country_EU_ChDesp, TRUE}, /* Europe */
-	{"NA", FCC,Country_NA_ChDesp, FALSE}, /* North America */
-	{"WO", FCC, Country_WO_ChDesp, FALSE}, /* World Wide */
+	{"AL", CE, Country_JM_ChDesp, FALSE}, /* Albania */
+	{"DZ", CE, Country_JM_ChDesp, FALSE}, /* Algeria */
+	{"AR", CE, Country_JM_ChDesp, FALSE}, /* Argentina */
+	{"AM", CE, Country_JM_ChDesp, FALSE}, /* Armenia */
+	{"AW", CE, Country_JM_ChDesp, FALSE}, /* Aruba */
+	{"AU", CE, Country_JM_ChDesp, FALSE}, /* Australia */
+	{"AT", CE, Country_JM_ChDesp, FALSE}, /* Austria */
+	{"AZ", CE, Country_JM_ChDesp, FALSE}, /* Azerbaijan */
+	{"BH", CE, Country_JM_ChDesp, FALSE}, /* Bahrain */
+	{"BD", CE, Country_JM_ChDesp, FALSE}, /* Bangladesh */
+	{"BB", CE, Country_JM_ChDesp, FALSE}, /* Barbados */
+	{"BY", CE, Country_JM_ChDesp, FALSE}, /* Belarus */
+	{"BE", CE, Country_JM_ChDesp, FALSE}, /* Belgium */
+	{"BZ", CE, Country_JM_ChDesp, FALSE}, /* Belize */
+	{"BO", CE, Country_JM_ChDesp, FALSE}, /* Bolivia */
+	{"BA", CE, Country_JM_ChDesp, FALSE}, /* Bosnia and Herzegovina */
+	{"BR", CE, Country_JM_ChDesp, FALSE}, /* Brazil */
+	{"BN", CE, Country_JM_ChDesp, FALSE}, /* Brunei Darussalam */
+	{"BG", CE, Country_JM_ChDesp, FALSE}, /* Bulgaria */
+	{"KH", CE, Country_JM_ChDesp, FALSE}, /* Cambodia */
+	{"CA", FCC,Country_JM_ChDesp, FALSE}, /* Canada */
+	{"CL", CE, Country_JM_ChDesp, FALSE}, /* Chile */
+	{"CN", CE, Country_JM_ChDesp, FALSE}, /* China */
+	{"CO", CE, Country_JM_ChDesp, FALSE}, /* Colombia */
+	{"CR", CE, Country_JM_ChDesp, FALSE}, /* Costa Rica */
+	{"HR", CE, Country_JM_ChDesp, FALSE}, /* Croatia */
+	{"CY", CE, Country_JM_ChDesp, FALSE}, /* Cyprus */
+	{"CZ", CE, Country_JM_ChDesp, FALSE}, /* Czech Republic */
+	{"DK", CE, Country_JM_ChDesp, FALSE}, /* Denmark */
+	{"DO", CE, Country_JM_ChDesp, FALSE}, /* Dominican Republic */
+	{"EC", CE, Country_JM_ChDesp, FALSE}, /* Ecuador */
+	{"EG", CE, Country_JM_ChDesp, FALSE}, /* Egypt */
+	{"SV", CE, Country_JM_ChDesp, FALSE}, /* El Salvador */
+	{"EE", CE, Country_JM_ChDesp, FALSE}, /* Estonia */
+	{"FI", CE, Country_JM_ChDesp, FALSE}, /* Finland */
+	{"FR", CE, Country_JM_ChDesp, FALSE}, /* France */
+	{"GE", CE, Country_JM_ChDesp, FALSE}, /* Georgia */
+	{"DE", CE, Country_JM_ChDesp, FALSE}, /* Germany */
+	{"GR", CE, Country_JM_ChDesp, FALSE}, /* Greece */
+	{"GL", CE, Country_JM_ChDesp, FALSE}, /* Greenland */
+	{"GD", CE, Country_JM_ChDesp, FALSE}, /* Grenada */
+	{"GU", CE, Country_JM_ChDesp, FALSE}, /* Guam */
+	{"GT", CE, Country_JM_ChDesp, FALSE}, /* Guatemala */
+	{"HT", CE, Country_JM_ChDesp, FALSE}, /* Haiti */
+	{"HN", CE, Country_JM_ChDesp, FALSE}, /* Honduras */
+	{"HK", CE, Country_JM_ChDesp, FALSE}, /* Hong Kong */
+	{"HU", CE, Country_JM_ChDesp, FALSE}, /* Hungary */
+	{"IS", CE, Country_JM_ChDesp, FALSE}, /* Iceland */
+	{"IN", CE, Country_JM_ChDesp, FALSE}, /* India */
+	{"ID", CE, Country_JM_ChDesp, FALSE}, /* Indonesia */
+	{"IR", CE, Country_JM_ChDesp, FALSE}, /* Iran, Islamic Republic of */
+	{"IE", CE, Country_JM_ChDesp, FALSE}, /* Ireland */
+	{"IL", CE, Country_JM_ChDesp, FALSE}, /* Israel */
+	{"IT", CE, Country_JM_ChDesp, FALSE}, /* Italy */
+	{"JM", CE, Country_JM_ChDesp, FALSE}, /* Jamaica */
+	{"JP", JAP,Country_JM_ChDesp, FALSE}, /* Japan */		
+	{"JO", CE, Country_JM_ChDesp, FALSE}, /* Jordan */	
+	{"KZ", CE, Country_JM_ChDesp, FALSE}, /* Kazakhstan */			
+	{"KE", CE, Country_JM_ChDesp, FALSE}, /* Kenya */	
+	{"KP", CE, Country_JM_ChDesp, FALSE}, /* Korea, Democratic People's Republic of */
+	{"KR", CE, Country_JM_ChDesp, FALSE}, /* Korea, Republic of */			
+	{"KW", CE, Country_JM_ChDesp, FALSE}, /* Kuwait */			
+	{"LV", CE, Country_JM_ChDesp, FALSE}, /* Latvia */			
+	{"LB", CE, Country_JM_ChDesp, FALSE}, /* Lebanon */			
+	{"LI", CE, Country_JM_ChDesp, FALSE}, /* Liechtenstein */			
+	{"LT", CE, Country_JM_ChDesp, FALSE}, /* Lithuania */			
+	{"LU", CE, Country_JM_ChDesp, FALSE}, /* Luxembourg */			
+	{"MO", CE, Country_JM_ChDesp, FALSE}, /* Macao */			
+	{"MK", CE, Country_JM_ChDesp, FALSE}, /* Macedonia, Republic of */			
+	{"MY", CE, Country_JM_ChDesp, FALSE}, /* Malaysia */			
+	{"MT", CE, Country_JM_ChDesp, FALSE}, /* Malta */			
+	{"MX", CE, Country_JM_ChDesp, FALSE}, /* Mexico */			
+	{"MC", CE, Country_JM_ChDesp, FALSE}, /* Monaco */			
+	{"MA", CE, Country_JM_ChDesp, FALSE}, /* Morocco */			
+	{"NP", CE, Country_JM_ChDesp, FALSE}, /* Nepal */			
+	{"NL", CE, Country_JM_ChDesp, FALSE}, /* Netherlands */			
+	{"AN", CE, Country_JM_ChDesp, FALSE}, /* Netherlands Antilles */			
+	{"NZ", CE, Country_JM_ChDesp, FALSE}, /* New Zealand */			
+	{"NO", CE, Country_JM_ChDesp, FALSE}, /* Norway */			
+	{"OM", CE, Country_JM_ChDesp, FALSE}, /* Oman */		
+	{"PK", CE, Country_JM_ChDesp, FALSE}, /* Pakistan */		
+	{"PA", CE, Country_JM_ChDesp, FALSE}, /* Panama */	
+	{"PG", CE, Country_JM_ChDesp, FALSE}, /* Papua New Guinea */	
+	{"PE", CE, Country_JM_ChDesp, FALSE}, /* Peru */			
+	{"PH", CE, Country_JM_ChDesp, FALSE}, /* Philippines */		
+	{"PL", CE, Country_JM_ChDesp, FALSE}, /* Poland */			
+	{"PT", CE, Country_JM_ChDesp, FALSE}, /* Portuga l*/			
+	{"PR", CE, Country_JM_ChDesp, FALSE}, /* Puerto Rico */			
+	{"QA", CE, Country_JM_ChDesp, FALSE}, /* Qatar */			
+	{"RO", CE, Country_JM_ChDesp, FALSE}, /* Romania */			
+	{"RU", FCC, Country_JM_ChDesp, FALSE}, /* Russian Federation */			
+	{"BL", CE, Country_JM_ChDesp, FALSE}, /* Saint Barth'elemy */			
+	{"SA", CE, Country_JM_ChDesp, FALSE}, /* Saudi Arabia */			
+	{"SG", CE, Country_JM_ChDesp, FALSE}, /* Singapore */			
+	{"SK", CE, Country_JM_ChDesp, FALSE}, /* Slovakia */			
+	{"SI", CE, Country_JM_ChDesp, FALSE}, /* Slovenia */					
+	{"ZA", CE, Country_JM_ChDesp, FALSE}, /* South Africa */					
+	{"ES", CE, Country_JM_ChDesp, FALSE}, /* Spain */				
+	{"LK", CE, Country_JM_ChDesp, FALSE}, /* Sri Lanka */				
+	{"SE", CE, Country_JM_ChDesp, FALSE}, /* Sweden */					
+	{"CH", CE, Country_JM_ChDesp, FALSE}, /* Switzerland */					
+	{"SY", CE, Country_JM_ChDesp, FALSE}, /* Syrian Arab Republic */					
+	{"TW", FCC,Country_JM_ChDesp, FALSE}, /* Taiwan */			
+	{"TH", CE, Country_JM_ChDesp, FALSE}, /* Thailand */					
+	{"TT", CE, Country_JM_ChDesp, FALSE}, /* Trinidad and Tobago */			
+	{"TN", CE, Country_JM_ChDesp, FALSE}, /* Tunisia */				
+	{"TR", CE, Country_JM_ChDesp, FALSE}, /* Turkey */					
+	{"UA", CE, Country_JM_ChDesp, FALSE}, /* Ukraine */					
+	{"AE", CE, Country_JM_ChDesp, FALSE}, /* United Arab Emirates */					
+	{"GB", CE, Country_JM_ChDesp, FALSE}, /* United Kingdom */			
+	{"US", FCC,Country_JM_ChDesp, FALSE}, /* United States */			
+	{"UY", CE, Country_JM_ChDesp, FALSE}, /* Uruguay */					
+	{"UZ", CE, Country_JM_ChDesp, FALSE}, /* Uzbekistan */				
+	{"VE", CE, Country_JM_ChDesp, FALSE}, /* Venezuela */				
+	{"VN", CE, Country_JM_ChDesp, FALSE}, /* Viet Nam */					
+	{"YE", CE, Country_JM_ChDesp, FALSE}, /* Yemen */					
+	{"ZW", CE, Country_JM_ChDesp, FALSE}, /* Zimbabwe */	
+	{"EU", CE, Country_JM_ChDesp, FALSE}, /* Europe */
+	{"NA", FCC,Country_JM_ChDesp, FALSE}, /* North America */
+	{"WO", CE, Country_JM_ChDesp, FALSE}, /* World Wide */
 	{""  , 0,  NULL, FALSE}	     , /* End */	
 };
-#endif
 
-#ifdef EXT_BUILD_CHANNEL_LIST
+static PCH_REGION GetChRegion(
+	IN PUCHAR CntryCode)
+{
+	INT loop = 0;
+	PCH_REGION pChRegion = NULL;
+
+	while (strcmp((RTMP_STRING *) ChRegion[loop].CountReg, "") != 0)
+	{
+		if (strncmp((RTMP_STRING *) ChRegion[loop].CountReg, (RTMP_STRING *) CntryCode, 2) == 0)
+		{
+			pChRegion = &ChRegion[loop];
+			break;
+		}
+		loop++;
+	}
+
+	/* Default: use RU */
+	if (pChRegion == NULL)
+		pChRegion = GetChRegion("RU");
+
+	return pChRegion;
+}
+
 static VOID ChBandCheck(
 	IN UCHAR PhyMode,
 	OUT PUCHAR pChType)
@@ -1634,6 +1697,7 @@ static UCHAR FillChList(
         }
 /*New FCC spec restrict the used channel under DFS */
 #ifdef CONFIG_AP_SUPPORT	
+#ifdef DFS_SUPPORT
 		if ((pAd->CommonCfg.bIEEE80211H == 1) &&
 			(pAd->CommonCfg.RDDurRegion == FCC) &&
 			(pAd->Dot11_H.bDFSIndoor == 1))
@@ -1648,7 +1712,7 @@ static UCHAR FillChList(
 			if ((channel >= 100) && (channel <= 140))
 				continue;
 		}
-
+#endif /* DFS_SUPPORT */
 #endif /* CONFIG_AP_SUPPORT */
 		for (l=0; l<MAX_NUM_OF_CHANNELS; l++)
 		{
@@ -1809,131 +1873,131 @@ VOID BuildBeaconChList(
 
 COUNTRY_PROP CountryProp[]=
 {
-	{"AL", CE, TRUE}, /* Albania */
-	{"DZ", CE, TRUE }, /* Algeria */
-	{"AR", CE, TRUE }, /* Argentina */
-	{"AM", CE, TRUE }, /* Armenia */
-	{"AW", CE, TRUE }, /* Aruba */
+	{"AL", CE, FALSE}, /* Albania */
+	{"DZ", CE, FALSE }, /* Algeria */
+	{"AR", CE, FALSE }, /* Argentina */
+	{"AM", CE, FALSE }, /* Armenia */
+	{"AW", CE, FALSE }, /* Aruba */
 	{"AU", CE, FALSE }, /* Australia */
-	{"AT", CE, TRUE }, /* Austria */
-	{"AZ", CE, TRUE }, /* Azerbaijan */
-	{"BH", CE, TRUE }, /* Bahrain */
-	{"BD", CE, TRUE }, /* Bangladesh */
-	{"BB", CE, TRUE }, /* Barbados */
-	{"BY", CE, TRUE }, /* Belarus */
-	{"BE", CE, TRUE }, /* Belgium */
-	{"BZ", CE, TRUE }, /* Belize */
-	{"BO", CE, TRUE }, /* Bolivia */
-	{"BA", CE, TRUE }, /* Bosnia and Herzegovina */
+	{"AT", CE, FALSE }, /* Austria */
+	{"AZ", CE, FALSE }, /* Azerbaijan */
+	{"BH", CE, FALSE }, /* Bahrain */
+	{"BD", CE, FALSE }, /* Bangladesh */
+	{"BB", CE, FALSE }, /* Barbados */
+	{"BY", CE, FALSE }, /* Belarus */
+	{"BE", CE, FALSE }, /* Belgium */
+	{"BZ", CE, FALSE }, /* Belize */
+	{"BO", CE, FALSE }, /* Bolivia */
+	{"BA", CE, FALSE }, /* Bosnia and Herzegovina */
 	{"BR", CE, FALSE }, /* Brazil */
-	{"BN", CE, TRUE }, /* Brunei Darussalam */
-	{"BG", CE, TRUE }, /* Bulgaria */
-	{"KH", CE, TRUE }, /* Cambodia */
+	{"BN", CE, FALSE }, /* Brunei Darussalam */
+	{"BG", CE, FALSE }, /* Bulgaria */
+	{"KH", CE, FALSE }, /* Cambodia */
 	{"CA", FCC, FALSE}, /* Canada */
-	{"CL", CE, TRUE }, /* Chile */
+	{"CL", CE, FALSE }, /* Chile */
 	{"CN", CE, FALSE }, /* China */
-	{"CO", CE, TRUE }, /* Colombia */
-	{"CR", CE, TRUE }, /* Costa Rica */
-	{"HR", CE, TRUE }, /* Croatia */
-	{"CY", CE, TRUE }, /* Cyprus */
-	{"CZ", CE, TRUE }, /* Czech Republic */
-	{"DK", CE, TRUE }, /* Denmark */
-	{"DO", CE, TRUE }, /* Dominican Republic */
-	{"EC", CE, TRUE }, /* Ecuador */
-	{"EG", CE, TRUE }, /* Egypt */
-	{"SV", CE, TRUE }, /* El Salvador */
-	{"EE", CE, TRUE }, /* Estonia */
-	{"FI", CE, TRUE }, /* Finland */
-	{"FR", CE, TRUE }, /* France */
-	{"GE", CE, TRUE }, /* Georgia */
-	{"DE", CE, TRUE }, /* Germany */
-	{"GR", CE, TRUE }, /* Greece */
-	{"GL", CE, TRUE }, /* Greenland */
-	{"GD", CE, TRUE }, /* Grenada */
-	{"GU", CE, TRUE }, /* Guam */
-	{"GT", CE, TRUE }, /* Guatemala */
-	{"HT", CE, TRUE }, /* Haiti */
-	{"HN", CE, TRUE }, /* Honduras */
-	{"HK", CE, TRUE }, /* Hong Kong */
-	{"HU", CE, TRUE }, /* Hungary */
-	{"IS", CE, TRUE }, /* Iceland */
-	{"IN", CE, TRUE }, /* India */
-	{"ID", CE, TRUE }, /* Indonesia */
-	{"IR", CE, TRUE }, /* Iran, Islamic Republic of */
-	{"IE", CE, TRUE }, /* Ireland */
+	{"CO", CE, FALSE }, /* Colombia */
+	{"CR", CE, FALSE }, /* Costa Rica */
+	{"HR", CE, FALSE }, /* Croatia */
+	{"CY", CE, FALSE }, /* Cyprus */
+	{"CZ", CE, FALSE }, /* Czech Republic */
+	{"DK", CE, FALSE }, /* Denmark */
+	{"DO", CE, FALSE }, /* Dominican Republic */
+	{"EC", CE, FALSE }, /* Ecuador */
+	{"EG", CE, FALSE }, /* Egypt */
+	{"SV", CE, FALSE }, /* El Salvador */
+	{"EE", CE, FALSE }, /* Estonia */
+	{"FI", CE, FALSE }, /* Finland */
+	{"FR", CE, FALSE }, /* France */
+	{"GE", CE, FALSE }, /* Georgia */
+	{"DE", CE, FALSE }, /* Germany */
+	{"GR", CE, FALSE }, /* Greece */
+	{"GL", CE, FALSE }, /* Greenland */
+	{"GD", CE, FALSE }, /* Grenada */
+	{"GU", CE, FALSE }, /* Guam */
+	{"GT", CE, FALSE }, /* Guatemala */
+	{"HT", CE, FALSE }, /* Haiti */
+	{"HN", CE, FALSE }, /* Honduras */
+	{"HK", CE, FALSE }, /* Hong Kong */
+	{"HU", CE, FALSE }, /* Hungary */
+	{"IS", CE, FALSE }, /* Iceland */
+	{"IN", CE, FALSE }, /* India */
+	{"ID", CE, FALSE }, /* Indonesia */
+	{"IR", CE, FALSE }, /* Iran, Islamic Republic of */
+	{"IE", CE, FALSE }, /* Ireland */
 	{"IL", CE, FALSE }, /* Israel */
-	{"IT", CE, TRUE }, /* Italy */
-	{"JM", CE, TRUE }, /* Jamaica */
+	{"IT", CE, FALSE }, /* Italy */
+	{"JM", CE, FALSE }, /* Jamaica */
 	{"JP", JAP, FALSE}, /* Japan */		
-	{"JO", CE, TRUE }, /* Jordan */	
-	{"KZ", CE, TRUE }, /* Kazakhstan */			
-	{"KE", CE, TRUE }, /* Kenya */	
-	{"KP", CE, TRUE }, /* Korea, Democratic People's Republic of */
+	{"JO", CE, FALSE }, /* Jordan */	
+	{"KZ", CE, FALSE }, /* Kazakhstan */			
+	{"KE", CE, FALSE }, /* Kenya */	
+	{"KP", CE, FALSE }, /* Korea, Democratic People's Republic of */
 	{"KR", CE, FALSE }, /* Korea, Republic of */			
-	{"KW", CE, TRUE }, /* Kuwait */			
-	{"LV", CE, TRUE }, /* Latvia */			
-	{"LB", CE, TRUE }, /* Lebanon */			
-	{"LI", CE, TRUE }, /* Liechtenstein */			
-	{"LT", CE, TRUE }, /* Lithuania */			
-	{"LU", CE, TRUE }, /* Luxembourg */			
-	{"MO", CE, TRUE }, /* Macao */			
-	{"MK", CE, TRUE }, /* Macedonia, Republic of */			
-	{"MY", CE, TRUE }, /* Malaysia */			
-	{"MT", CE, TRUE }, /* Malta */			
+	{"KW", CE, FALSE }, /* Kuwait */			
+	{"LV", CE, FALSE }, /* Latvia */			
+	{"LB", CE, FALSE }, /* Lebanon */			
+	{"LI", CE, FALSE }, /* Liechtenstein */			
+	{"LT", CE, FALSE }, /* Lithuania */			
+	{"LU", CE, FALSE }, /* Luxembourg */			
+	{"MO", CE, FALSE }, /* Macao */			
+	{"MK", CE, FALSE }, /* Macedonia, Republic of */			
+	{"MY", CE, FALSE }, /* Malaysia */			
+	{"MT", CE, FALSE }, /* Malta */			
 	{"MX", CE, FALSE }, /* Mexico */			
-	{"MC", CE, TRUE }, /* Monaco */			
-	{"MA", CE, TRUE }, /* Morocco */			
-	{"NP", CE, TRUE }, /* Nepal */			
-	{"NL", CE, TRUE }, /* Netherlands */			
-	{"AN", CE, TRUE }, /* Netherlands Antilles */			
-	{"NZ", CE, TRUE }, /* New Zealand */			
-	{"NO", CE, TRUE }, /* Norway */			
-	{"OM", CE, TRUE }, /* Oman */		
-	{"PK", CE, TRUE }, /* Pakistan */		
-	{"PA", CE, TRUE }, /* Panama */	
-	{"PG", CE, TRUE }, /* Papua New Guinea */	
-	{"PE", CE, TRUE }, /* Peru */			
-	{"PH", CE, TRUE }, /* Philippines */		
-	{"PL", CE, TRUE }, /* Poland */			
-	{"PT", CE, TRUE }, /* Portuga l*/			
-	{"PR", CE, TRUE }, /* Puerto Rico */			
-	{"QA", CE, TRUE }, /* Qatar */			
-	{"RO", CE, TRUE }, /* Romania */			
-	{"RU", CE, FALSE }, /* Russian Federation */			
-	{"BL", CE, TRUE }, /* Saint Barth'elemy */			
-	{"SA", CE, TRUE }, /* Saudi Arabia */			
-	{"SG", CE, TRUE }, /* Singapore */			
-	{"SK", CE, TRUE }, /* Slovakia */			
-	{"SI", CE, TRUE }, /* Slovenia */					
+	{"MC", CE, FALSE }, /* Monaco */			
+	{"MA", CE, FALSE }, /* Morocco */			
+	{"NP", CE, FALSE }, /* Nepal */			
+	{"NL", CE, FALSE }, /* Netherlands */			
+	{"AN", CE, FALSE }, /* Netherlands Antilles */			
+	{"NZ", CE, FALSE }, /* New Zealand */			
+	{"NO", CE, FALSE }, /* Norway */			
+	{"OM", CE, FALSE }, /* Oman */		
+	{"PK", CE, FALSE }, /* Pakistan */		
+	{"PA", CE, FALSE }, /* Panama */	
+	{"PG", CE, FALSE }, /* Papua New Guinea */	
+	{"PE", CE, FALSE }, /* Peru */			
+	{"PH", CE, FALSE }, /* Philippines */		
+	{"PL", CE, FALSE }, /* Poland */			
+	{"PT", CE, FALSE }, /* Portuga l*/			
+	{"PR", CE, FALSE }, /* Puerto Rico */			
+	{"QA", CE, FALSE }, /* Qatar */			
+	{"RO", CE, FALSE }, /* Romania */			
+	{"RU", FCC, FALSE }, /* Russian Federation */			
+	{"BL", CE, FALSE }, /* Saint Barth'elemy */			
+	{"SA", CE, FALSE }, /* Saudi Arabia */			
+	{"SG", CE, FALSE }, /* Singapore */			
+	{"SK", CE, FALSE }, /* Slovakia */			
+	{"SI", CE, FALSE }, /* Slovenia */					
 	{"ZA", CE, FALSE }, /* South Africa */					
-	{"ES", CE, TRUE }, /* Spain */				
-	{"LK", CE, TRUE }, /* Sri Lanka */				
-	{"SE", CE, TRUE }, /* Sweden */					
-	{"CH", CE, TRUE }, /* Switzerland */					
-	{"SY", CE, TRUE }, /* Syrian Arab Republic */					
+	{"ES", CE, FALSE }, /* Spain */				
+	{"LK", CE, FALSE }, /* Sri Lanka */				
+	{"SE", CE, FALSE }, /* Sweden */					
+	{"CH", CE, FALSE }, /* Switzerland */					
+	{"SY", CE, FALSE }, /* Syrian Arab Republic */					
 	{"TW", FCC, FALSE}, /* Taiwan */			
 	{"TH", CE, FALSE }, /* Thailand */					
-	{"TT", CE, TRUE }, /* Trinidad and Tobago */			
-	{"TN", CE, TRUE }, /* Tunisia */				
-	{"TR", CE, TRUE }, /* Turkey */					
-	{"UA", CE, TRUE }, /* Ukraine */					
-	{"AE", CE, TRUE }, /* United Arab Emirates */					
-	{"GB", CE, TRUE }, /* United Kingdom */			
+	{"TT", CE, FALSE }, /* Trinidad and Tobago */			
+	{"TN", CE, FALSE }, /* Tunisia */				
+	{"TR", CE, FALSE }, /* Turkey */					
+	{"UA", CE, FALSE }, /* Ukraine */					
+	{"AE", CE, FALSE }, /* United Arab Emirates */					
+	{"GB", CE, FALSE }, /* United Kingdom */			
 	{"US", FCC, FALSE}, /* United States */			
-	{"UY", CE, TRUE }, /* Uruguay */					
-	{"UZ", CE, TRUE }, /* Uzbekistan */				
-	{"VE", CE, TRUE }, /* Venezuela */				
-	{"VN", CE, TRUE }, /* Viet Nam */					
-	{"YE", CE, TRUE }, /* Yemen */					
-	{"ZW", CE, TRUE }, /* Zimbabwe */	
-	{"EU", CE, TRUE }, /* Europe */
+	{"UY", CE, FALSE }, /* Uruguay */					
+	{"UZ", CE, FALSE }, /* Uzbekistan */				
+	{"VE", CE, FALSE }, /* Venezuela */				
+	{"VN", CE, FALSE }, /* Viet Nam */					
+	{"YE", CE, FALSE }, /* Yemen */					
+	{"ZW", CE, FALSE }, /* Zimbabwe */	
+	{"EU", CE, FALSE }, /* Europe */
 	{"NA", FCC, FALSE}, /* North America */
-	{"WO", FCC, FALSE}, /* World Wide */
+	{"WO", CE, FALSE}, /* World Wide */
 	{""  , 0, FALSE}	     , /* End */	
 };
 
 #ifndef EXT_BUILD_CHANNEL_LIST
-PCOUNTRY_PROP GetCountryProp(
+static PCOUNTRY_PROP GetCountryProp(
 	IN PUCHAR CntryCode)
 {
 	INT loop = 0;
@@ -1949,13 +2013,15 @@ PCOUNTRY_PROP GetCountryProp(
 		loop++;
 	}
 
-	/* Default: use WO*/
+	/* Default: use RU */
 	if (pCountryProp == NULL)
-		pCountryProp = GetCountryProp("WO");
+		pCountryProp = GetCountryProp("RU");
 
 	return pCountryProp;
 }
 #endif /* !EXT_BUILD_CHANNEL_LIST */
+
+#ifdef ED_MONITOR
 BOOLEAN GetEDCCASupport(
 	IN PRTMP_ADAPTER pAd)
 {
@@ -1966,7 +2032,7 @@ BOOLEAN GetEDCCASupport(
 	
 	pChReg = GetChRegion(pAd->CommonCfg.CountryCode);
 
-	if ((pChReg->DfsType == CE) && (pChReg->edcca_on == TRUE) )
+	if ((pChReg->DfsType != FCC) && (pChReg->edcca_on == TRUE) )
 	{
 		// actually need to check PM's table in CE country
 		ret = TRUE;
@@ -1976,7 +2042,7 @@ BOOLEAN GetEDCCASupport(
 	
 	pCountryProp = GetCountryProp(pAd->CommonCfg.CountryCode);
 
-	if ((pCountryProp->DfsType == CE) && (pCountryProp->edcca_on == TRUE))
+	if ((pCountryProp->DfsType != FCC) && (pCountryProp->edcca_on == TRUE))
 	{
 		// actually need to check PM's table in CE country
 		ret = TRUE;
@@ -1986,6 +2052,8 @@ BOOLEAN GetEDCCASupport(
 	return ret;
 	
 }
+#endif /* ED_MONITOR */
+
 #ifdef DOT11_N_SUPPORT
 static BOOLEAN IsValidChannel(
 	IN PRTMP_ADAPTER pAd,
@@ -2081,9 +2149,14 @@ VOID N_ChannelCheck(RTMP_ADAPTER *pAd)
 			116, EXTCHA_ABOVE, 120, EXTCHA_BELOW,
 			124, EXTCHA_ABOVE, 128, EXTCHA_BELOW,
 			132, EXTCHA_ABOVE, 136, EXTCHA_BELOW,
-			149, EXTCHA_ABOVE, 153, EXTCHA_BELOW, 
+			140, EXTCHA_ABOVE, 144, EXTCHA_BELOW,
+			149, EXTCHA_ABOVE, 153, EXTCHA_BELOW,
 			157, EXTCHA_ABOVE, 161, EXTCHA_BELOW,
 			0, 0};
+
+	/* channel is not set yet (e.g. AutoChannelSelect > 0) */
+	if (Channel == 0)
+		return;
 
 	if (WMODE_CAP_N(pAd->CommonCfg.PhyMode) &&
 		(pAd->CommonCfg.RegTransmitSetting.field.BW  == BW_40))
@@ -2165,13 +2238,13 @@ UINT8 GetCuntryMaxTxPwr(
 	}
 
 	if (i == pAd->ChannelListNum)
-		return 0xff;
-#ifdef SINGLE_SKU
+		return DEFAULT_MAX_TX_POWER;
+#ifdef FALSE
 	if (pAd->CommonCfg.bSKUMode == TRUE)
 	{
 		UINT deltaTxStreamPwr = 0;
 
-#ifdef DOT11_N_SUPPORT
+#ifdef FALSE
 		if (WMODE_CAP_N(pAd->CommonCfg.PhyMode) && (pAd->CommonCfg.TxStream == 2))
 			deltaTxStreamPwr = 3; /* If 2Tx case, antenna gain will increase 3dBm*/
 #endif /* DOT11_N_SUPPORT */
@@ -2179,7 +2252,7 @@ UINT8 GetCuntryMaxTxPwr(
 		if (pAd->ChannelList[i].RegulatoryDomain == FCC)
 		{
 			/* FCC should maintain 20/40 Bandwidth, and without antenna gain */
-#ifdef DOT11_N_SUPPORT
+#ifdef FALSE
 			if (WMODE_CAP_N(pAd->CommonCfg.PhyMode) &&
 				(pAd->CommonCfg.RegTransmitSetting.field.BW == BW_40) &&
 				(channel == 1 || channel == 11))
@@ -2193,11 +2266,16 @@ UINT8 GetCuntryMaxTxPwr(
 			return (pAd->ChannelList[i].MaxTxPwr - pAd->CommonCfg.AntGain - deltaTxStreamPwr);
 		}
 		else
-			return 0xff;
+			return DEFAULT_MAX_TX_POWER;
 	}
 	else
 #endif /* SINGLE_SKU */
-		return pAd->ChannelList[i].MaxTxPwr;
+	{
+		if (pAd->ChannelList[i].MaxTxPwr >= 14)
+			return pAd->ChannelList[i].MaxTxPwr;
+		else
+			return DEFAULT_MAX_TX_POWER;
+	}
 }
 
 
