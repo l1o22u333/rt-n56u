@@ -223,7 +223,7 @@ VOID WcSetEdca(struct hdev_obj *obj)
 	struct hdev_ctrl	*ctrl;
 	EDCA_PARM *pEdca;
 	RTMP_ADAPTER *pAd;
-
+	struct wifi_dev *wdev = NULL;
 	rdev = obj->rdev;
 	ctrl = (struct hdev_ctrl *)rdev->priv;
 	pAd = (RTMP_ADAPTER *) ctrl->priv;
