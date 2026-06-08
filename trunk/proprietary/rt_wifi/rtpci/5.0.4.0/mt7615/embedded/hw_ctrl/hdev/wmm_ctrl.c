@@ -239,7 +239,7 @@ VOID WcSetEdca(struct hdev_obj *obj)
 					pEdca->Aifsn[ac_idx] = 2; 
 					pEdca->Cwmin[ac_idx] = 2;
 					pEdca->Cwmax[ac_idx] = 3;
-					pEdca->Txop[ac_idx]  = 0x0080; // 最大連續傳輸時間
+					pEdca->Txop[ac_idx]  = 0x0180; // 最大連續傳輸時間
 				}
 			}
 		}
