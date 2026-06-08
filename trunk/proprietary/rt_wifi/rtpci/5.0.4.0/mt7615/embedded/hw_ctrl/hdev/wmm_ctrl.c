@@ -223,32 +223,13 @@ VOID WcSetEdca(struct hdev_obj *obj)
 	struct hdev_ctrl	*ctrl;
 	EDCA_PARM *pEdca;
 	RTMP_ADAPTER *pAd;
-	struct wifi_dev *wdev = NULL;
+
 	rdev = obj->rdev;
 	ctrl = (struct hdev_ctrl *)rdev->priv;
 	pAd = (RTMP_ADAPTER *) ctrl->priv;
 
 	if (obj->bWmmAcquired) {
 		pEdca = WcGetWmmByIdx(ctrl, obj->WmmIdx);
-		
-		/* [新增] 取得目前正在設定的網路介面 (wdev) */
-		wdev = pAd->wdev_list[obj->Idx];
-
-/* == 加入實驗性修改：僅針對 5GHz Client / APCLI 觸發惡霸模式 == */
-		if (wdev && (wdev->wdev_type == WDEV_TYPE_STA || wdev->wdev_type == WDEV_TYPE_APCLI)) {
-			if (wdev->channel > 14) { // 頻道大於 14 代表是 5GHz
-				INT ac_idx;
-				for (ac_idx = 0; ac_idx < 4; ac_idx++) {
-					pEdca->Aifsn[ac_idx] = 0;      // 最短等待時間
-					pEdca->Cwmin[ac_idx] = 0;      // 消除隨機退避 (Min)
-					pEdca->Cwmax[ac_idx] = 0;      // 消除隨機退避 (Max)
-					pEdca->Txop[ac_idx]  = 0xFFFF; // 最大連續傳輸時間
-				}
-				MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_ERROR, 
-					(">>> [HACK] 5GHz Client WMM Bully Mode Activated! <<<\n"));
-			}
-		}
-		/* ========================================================== */		
 		/*set EDCA parameters from AP*/
 		AsicSetEdcaParm(pAd, pEdca, pAd->wdev_list[obj->Idx]);
 		/*Update band control */
