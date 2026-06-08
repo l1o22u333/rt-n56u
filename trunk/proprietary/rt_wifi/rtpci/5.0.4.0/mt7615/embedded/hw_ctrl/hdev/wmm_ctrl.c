@@ -223,13 +223,26 @@ VOID WcSetEdca(struct hdev_obj *obj)
 	struct hdev_ctrl	*ctrl;
 	EDCA_PARM *pEdca;
 	RTMP_ADAPTER *pAd;
-
+	struct wifi_dev *wdev = NULL;
 	rdev = obj->rdev;
 	ctrl = (struct hdev_ctrl *)rdev->priv;
 	pAd = (RTMP_ADAPTER *) ctrl->priv;
 
 	if (obj->bWmmAcquired) {
 		pEdca = WcGetWmmByIdx(ctrl, obj->WmmIdx);
+		wdev = pAd->wdev_list[obj->Idx];
+	/* == 加入實驗性修改：僅針對 5GHz Client / APCLI 觸發惡霸模式 == */
+		if (wdev && (wdev->wdev_type == WDEV_TYPE_STA || wdev->wdev_type == WDEV_TYPE_APCLI)) {
+			if (wdev->channel > 14) { // 頻道大於 14 代表是 5GHz
+				INT ac_idx;
+				for (ac_idx = 0; ac_idx < 4; ac_idx++) {
+					pEdca->Aifsn[ac_idx] = 2; 
+					pEdca->Cwmin[ac_idx] = 2;
+					pEdca->Cwmax[ac_idx] = 3;
+					pEdca->Txop[ac_idx]  = 0x0080; // 最大連續傳輸時間
+				}
+			}
+		}
 		/*set EDCA parameters from AP*/
 		AsicSetEdcaParm(pAd, pEdca, pAd->wdev_list[obj->Idx]);
 		/*Update band control */
