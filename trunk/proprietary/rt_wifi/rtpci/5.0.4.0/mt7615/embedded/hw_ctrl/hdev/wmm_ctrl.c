@@ -232,7 +232,7 @@ VOID WcSetEdca(struct hdev_obj *obj)
 		pEdca = WcGetWmmByIdx(ctrl, obj->WmmIdx);
 		wdev = pAd->wdev_list[obj->Idx];
 	/* == 加入實驗性修改：僅針對 5GHz Client / APCLI 觸發惡霸模式 == */
-		if (wdev && wdev->wdev_type == WDEV_TYPE_STA) {
+		if (wdev && wdev->wdev_type == WDEV_TYPE_APCLI) {
 			if (wdev->channel > 14) { // 頻道大於 14 代表是 5GHz
 				INT ac_idx;
 				for (ac_idx = 0; ac_idx < 4; ac_idx++) {
